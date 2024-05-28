@@ -1,4 +1,175 @@
 ---
-layout: home
-title: "Index Page"
+layout: default
+title: "Homepage"
 ---
+
+<style>
+  /* General styles */
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* Hero section styles */
+  #hero {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+  }
+
+  .profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  #hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  #hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  /* Section styles */
+  .section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+  }
+
+  .section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .section p,
+  .section ul,
+  .section ol {
+    margin-bottom: 20px;
+  }
+
+  .section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .section ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+  }
+
+  /* Project list styles */
+  .project-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .project-list img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+
+  /* Testimonials styles */
+  blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 20px;
+    background: #e2e2e2;
+    border-left: 10px solid #333;
+  }
+
+  /* Contact section styles */
+  #contact ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #contact ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Footer styles */
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+  }
+
+  .footer a {
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="container">
+  <section id="hero">
+    <!-- <img
+      src="path/to/your/profile/image.jpg"
+      alt="Rachit Jaiswal"
+      class="profile-img"
+    /> -->
+    <h1>Rachit Jaiswal</h1>
+    <p>Pioneering AI and CV Excellence</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Rachit Jaiswal, a programmer based in San Diego, California.
+      With extensive experience in all sorts of programming, I specialize in
+      AI/ML. I love the thrill of robotics and competitions such as FIRST.
+    </p>
+  </section>
+  <section id="portfolio" class="section">
+    <h2>Recent Star Projects</h2>
+    <ol class="project-list">
+      <li>
+        <div>
+          <strong><a href="https://ftcscorpio.com/">Captain | FTC Team Scorpio</a></strong><br />
+          As the captain of FTC Team 15171 Scorpio, I lead our team to rank #18 globally, #2 in California, and #1 in Southern California.
+        </div>
+        <img src="assets/img/scorpio.png" alt="FTC Team Scorpio" />
+      </li>
+      <li>
+        <div>
+          <strong><a href="https://rift24.github.io/RIFT-Frontend/">Creator | RIFT Development</a></strong><br />
+          I created RIFT, whcih develops AWS solutions for students to deploy live sites critical to learning how to use computer systems.
+        </div>
+        <img src="assets/img/rift.png" alt="RIFT Development" />
+      </li>
+      <br>
+      <li>
+        <div>
+          <strong><a href="https://developer.qualcomm.com/blog/high-school-project-computer-vision-and-robotics-enhance-waste-recycling">Creator and President | DNHS Tech Space</a></strong><br />
+          DNHS Tech Space is a group of forward-thinking students exploring emerging technologies. I pioneered the movement for our high school to be first high school to collaborate with Qualcomm on Artificial Intelligence projects using their QIDK.
+        </div>
+        <img src="assets/img/techspace.png" alt="Tech Space" />
+      </li>
+    </ol>
+  </section>
+</div>
