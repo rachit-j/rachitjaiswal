@@ -88,7 +88,7 @@ order: 2
     <div class="project-content">
       <h3>Stocktify</h3>
       <p>Scrum Master for Stocktify, a stock analyzing website in which users can analyze their stocks. It also has many inbuilt features, such as a chatbot and a neural network hardcoded in java to analyze stocks based on two of their ratios, both of which I programmed. I also worked with Theo to learn API integration and usage in java spring-boot.</p>
-      <p><a href="https://theoh32.github.io/Stocktify/">Stocktify</a> | <a href="https://github.com/TheoH32/stocktifyBackend"></a>Backend</p>
+      <p><a href="https://theoh32.github.io/Stocktify/">Stocktify</a> | <a href="https://github.com/TheoH32/stocktifyBackend">Backend</a></p>
     </div>
   </div>
 
