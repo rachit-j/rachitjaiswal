@@ -70,7 +70,7 @@ order: 2
     <div class="project-content">
       <h3>RIFT: AWS Manager</h3>
       <p>I created and maintain RIFT, the school AWS management system that is the central hub for AWS deployment and management. I also created resources that regularly help people with AWS deployment, with a comprehensive overarching guide and blogs that help people resolve certain deployment issues. I manage the AWS deployment servers and keep them updated and running, and fix them when they have been indirectly broken. Additionally, I hosted a class of over 220 people in Computer Science to teach them about deployment, and used Terraform and other resources to design a quiz that tested each one of the students individually with their own dedicated machines.</p>
-      <p><a href="https://codemaxxers.github.io/codemaxxerFrontend/">RIFT</a> | <a href="https://github.com/Codemaxxers/">Codemaxxers</a></p>
+      <p><a href="https://rift24.github.io/RIFT-Frontend/">RIFT</a></p>
     </div>
   </div>
 
