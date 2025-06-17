@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&family=Oxanium:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Background Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+  <style>
+    :root {
+      --font-heading: 'WDXL Lubrifont SC', sans-serif;
+      --font-body: 'Oxanium', sans-serif;
+    }
+    body {
+      font-family: var(--font-body);
+      margin: 0;
+      background: black;
+      color: white;
+    }
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Header -->
+  {% include header.html %}
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+    <div id="waves-container" class="absolute inset-0 z-[-1]"></div>
+    <h1 class="text-5xl md:text-6xl font-bold text-cyan-400 mb-4 z-10">
+        <span id="typewriter-full"></span><span class="typewriter-cursor">|</span>
+    </h1>
+    <p class="text-lg text-gray-300 z-10">AI • Robotics • Systems Engineering</p>
+  </section>
+
+  <!-- Page Content (inserted from markdown pages) -->
+  <main class="bg-black px-6 py-20 space-y-32">
+    {{ content }}
+  </main>
+
+  <!-- Background Animation Script -->
+  <script src="{{ '/assets/js/waves.js' | relative_url }}"></script>
+  
+    <!-- Typewriter Effect Script -->
+     <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const element = document.getElementById("typewriter-full");
+  const phrases = ["Rachit Jaiswal", "a robotics nerd", "an AI builder", "a systems engineer"];
+  const base = "I am ";
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const initialDelay = 1500;
+  const holdTime = 15000;
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    const visibleText = base + currentPhrase.slice(0, charIndex);
+
+    element.textContent = visibleText;
+
+    if (!isDeleting) {
+      if (charIndex < currentPhrase.length) {
+        charIndex++;
+        setTimeout(type, typingSpeed);
+      } else {
+        // Done typing full phrase
+        setTimeout(() => {
+          isDeleting = true;
+          type();
+        }, holdTime);
+      }
+    } else {
+      if (charIndex > 0) {
+        charIndex--;
+        setTimeout(type, deletingSpeed);
+      } else {
+        // Done deleting, move to next phrase
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(type, 500);
+      }
+    }
+  }
+
+  // Start with typing the full line after delay
+  setTimeout(type, initialDelay);
+});
+</script>
+
+
+</body>
+</html>
