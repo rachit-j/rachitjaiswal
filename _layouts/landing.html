@@ -36,7 +36,24 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         z-index: 1; /* in front of particles, behind headers if needed */
         color: white;
-        text-align: center;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* space between image and text */
+        }
+        .profile-pic {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .profile-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
     @keyframes move-twink-back {
@@ -101,13 +118,48 @@
     animation:move-twink-back 200s linear infinite;
     }
 
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 0;
+      margin-bottom: 0;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .social-icons a {
+      background: none;
+      border: none;
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.2s ease, transform 0.2s ease;
+      padding: 0;
+    }
+
+    .social-icons a:hover {
+      color: #ccc;
+      transform: translateY(-1.5px);
+    }
+
+
+
 </style>
 <div id="particles-js"></div>
 <div class="stars"></div>
 <div class="twinkle"></div>
 
 <div class="blur-box">
-  {{ content }}
+  <img class="profile-pic" src="/assets/img/profile.png" alt="Rachit Jaiswal">
+  <div class="profile-text">
+    <h1 style="font-family: 'WDXL Lubrifont SC', sans-serif;">Rachit Jaiswal</h1>
+    <p style="font-family: 'Matangi', sans-serif;">AI • Robotics • Systems Engineering</p>
+    <div class="social-icons">
+      <a href="mailto:rjaiswal.sd.77@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/rachit-j" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rachit-jaiswal-a534b5196/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
 </div>
 
 
@@ -116,7 +168,7 @@
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 60,
+      "value": 55,
       "density": {
         "enable": true,
         "value_area": 800
