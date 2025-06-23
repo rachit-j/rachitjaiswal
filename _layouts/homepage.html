@@ -71,18 +71,15 @@
   <script src="{{ '/assets/js/waves.js' | relative_url }}"></script>
   
     <!-- Typewriter Effect Script -->
-    <script>
+     <script>
 document.addEventListener("DOMContentLoaded", () => {
   const element = document.getElementById("typewriter-full");
-  const cursor = document.querySelector(".typewriter-cursor");
-
   const phrases = ["Rachit Jaiswal", "a robotics nerd", "an AI builder", "a systems engineer"];
   const base = "I am ";
   const typingSpeed = 100;
   const deletingSpeed = 50;
   const initialDelay = 1500;
-  const hideCursorDelay = 1000;
-  const holdTime = 3000;
+  const holdTime = 15000;
 
   let phraseIndex = 0;
   let charIndex = 0;
@@ -99,22 +96,18 @@ document.addEventListener("DOMContentLoaded", () => {
         charIndex++;
         setTimeout(type, typingSpeed);
       } else {
-        // Wait 1s, hide cursor, then wait holdTime before deleting
+        // Done typing full phrase
         setTimeout(() => {
-          cursor.style.visibility = "hidden"; // Hide after 1s
-          setTimeout(() => {
-            cursor.style.visibility = "visible"; // Show before deleting
-            isDeleting = true;
-            type();
-          }, holdTime); // Wait extra hold time after cursor disappears
-        }, hideCursorDelay);
+          isDeleting = true;
+          type();
+        }, holdTime);
       }
     } else {
       if (charIndex > 0) {
         charIndex--;
         setTimeout(type, deletingSpeed);
       } else {
-        // Finished deleting — move to next
+        // Done deleting, move to next phrase
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
         setTimeout(type, 500);
@@ -122,13 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  setTimeout(() => {
-    cursor.style.visibility = "visible";
-    type();
-  }, initialDelay);
+  // Start with typing the full line after delay
+  setTimeout(type, initialDelay);
 });
 </script>
-
 
 
 </body>
