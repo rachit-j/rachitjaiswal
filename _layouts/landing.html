@@ -48,7 +48,17 @@
           border-radius: 50%;
           object-fit: cover;
           border: 2px solid rgba(255, 255, 255, 0.6);
+          display: block;                /* so the transform is smooth */
+          transition: transform 0.2s ease;
         }
+        .profile-pic-link {
+          display: inline-block;         /* allow wrapping around the img */
+          text-decoration: none;
+        }
+        .profile-pic-link:hover .profile-pic {
+          transform: translateY(-1.5px);
+        }
+
 
         .profile-text {
           display: flex;
@@ -141,6 +151,18 @@
       color: #ccc;
       transform: translateY(-1.5px);
     }
+    /* CSS (add these into your <style> block) */
+    .name-link {
+      color: inherit;               /* keep the same text color */
+      text-decoration: none;        /* remove default underline */
+      display: inline-block;        /* allow transform on inline text */
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .name-link:hover {
+      transform: translateY(-1.5px); /* rise a little */
+      color: #ccc;                    /* optional: match your icon hover color */
+    }
+
 
 
 
@@ -150,9 +172,11 @@
 <div class="twinkle"></div>
 
 <div class="blur-box">
-  <img class="profile-pic" src="/assets/img/profile.png" alt="Rachit Jaiswal">
+  <a href="/home" class="profile-pic-link">
+    <img class="profile-pic" src="/assets/img/profile.png" alt="Rachit Jaiswal">
+  </a>
   <div class="profile-text">
-    <h1 style="font-family: 'WDXL Lubrifont SC', sans-serif;">Rachit Jaiswal</h1>
+    <h1 style="font-family: 'WDXL Lubrifont SC', sans-serif;"><a href="/home" class="name-link">Rachit Jaiswal</a></h1>
     <p style="font-family: 'Matangi', sans-serif;">AI • Robotics • Systems Engineering</p>
     <div class="social-icons">
       <a href="mailto:rjaiswal.sd.77@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
