@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {% include fonts.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    /* —————————————————————————————————————————————
+       Pure CSS scroll-snap setup
+    ————————————————————————————————————————————— */
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow-y: auto;                /* enable native scroll */
+      scroll-snap-type: y mandatory;   /* snap every section */
+      overscroll-behavior-y: contain;  /* no bounce */
+      scroll-behavior: smooth;         /* smooth snap transition */
+      scrollbar-width: none;           /* hide Firefox scrollbar */
+      -ms-overflow-style: none;        /* hide IE scrollbar */
+    }
+    /* hide WebKit scrollbars */
+    html::-webkit-scrollbar, body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* each slide fills the viewport and snaps */
+    section.resume-slide {
+      height: 32vh; /* 1/3 of viewport height */
+      scroll-snap-align: start;
+      scroll-snap-stop: always;        /* prevent skipping */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      section.resume-slide {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+        padding: 0 2rem;
+      }
+    }
+
+    /* fade/rotate animation helper */
+    .animate-in {
+      opacity: 0;
+      transform: translateY(40px) rotateX(10deg);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    .animate-in.visible {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+  </style>
+</head>
+<body class="bg-black text-white relative">
+
+  {% include header.html %}
+
+  {{ content }}
+  
+
+  <!-- Toolbar -->
+  <div id="toolbar" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-6 bg-black bg-opacity-70 backdrop-blur-md px-6 py-3 rounded-full z-50">
+    <button id="tocButton" class="text-white hover:text-cyan-300 font-medium">Contents</button>
+    <a href="/assets/resume.pdf" download class="text-white hover:text-cyan-300 font-medium">Download</a>
+  </div>
+
+  <!-- TOC Modal -->
+  <div id="tocModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div id="tocContent" class="bg-black text-white p-6 rounded-lg max-h-[80vh] overflow-y-auto w-11/12 md:w-1/3">
+      <div class="flex justify-between items-center mb-4">
+  <h2 class="text-2xl font-bold">Table of Contents</h2>
+  <button id="tocClose" class="text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+</div>
+<ul id="tocList" class="space-y-2"></ul>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // IntersectionObserver for animate-in
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => e.target.classList.toggle('visible', e.isIntersecting));
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.animate-in').forEach(el => obs.observe(el));
+
+      // TOC Modal logic
+      const tocBtn   = document.getElementById('tocButton');
+      const tocModal = document.getElementById('tocModal');
+      const tocList  = document.getElementById('tocList');
+      const tocClose = document.getElementById('tocClose');
+      let built = false;
+
+      tocBtn.addEventListener('click', () => {
+        if (!built) {
+          document.querySelectorAll('section.resume-slide h3').forEach((h3, idx) => {
+            const li = document.createElement('li');
+            const a  = document.createElement('a');
+            a.textContent = h3.textContent;
+            a.href        = '#';
+            a.className = 'text-gray-300 hover:text-white transition-colors block';
+            a.addEventListener('click', (e) => {
+              e.preventDefault();
+              document.querySelectorAll('section.resume-slide')[idx]
+                .scrollIntoView({ behavior: 'smooth' });
+              tocModal.classList.add('hidden');
+            });
+            li.appendChild(a);
+            tocList.appendChild(li);
+          });
+          built = true;
+        }
+        tocModal.classList.remove('hidden');
+      });
+
+      tocClose.addEventListener('click', () => {
+        tocModal.classList.add('hidden');
+      });
+    });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const labelEl = document.getElementById("sectionLabel");
+    let currentSection = "";
+
+    const updateLabel = () => {
+      const slides = document.querySelectorAll('section.resume-slide[data-section]');
+      const offset = window.innerHeight / 2;
+
+      for (let slide of slides) {
+        const rect = slide.getBoundingClientRect();
+        if (rect.top < offset && rect.bottom > offset) {
+          const label = slide.getAttribute("data-section");
+          if (label !== currentSection) {
+            currentSection = label;
+            labelEl.textContent = label;
+            labelEl.classList.add("opacity-100");
+          }
+          return;
+        }
+      }
+
+      // Hide label if no section is active
+      currentSection = "";
+      labelEl.classList.remove("opacity-100");
+    };
+
+    document.addEventListener("scroll", updateLabel, { passive: true });
+    window.addEventListener("resize", updateLabel);
+    updateLabel();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+id,title,body
+python,Python,"Python is my go-to for AI, data analysis, and quick scripting. I’ve used it with OpenCV, Flask, and ML frameworks."
+java,Java,"I use Java primarily for systems work and backend design — object-oriented precision and strong typing."
+cpp,C++,"C++ powers my robotics and performance-critical work. I leverage its low-level control for embedded and real-time systems."
+tf,TensorFlow,"TensorFlow helps me design and train deep learning models, especially in image classification and custom object detection."
+ros,ROS,"With ROS, I build robot systems that integrate sensors, path planning, and computer vision into a modular architecture."
+rts,Real-time Systems,"Real-time systems fascinate me — precision scheduling, low-latency communication, and system guarantees."
+com,Communication,"Communication is essential in my projects, and learning to work with people and resources effectively is a key skill I've studied and am developing."
