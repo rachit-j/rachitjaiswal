@@ -162,10 +162,21 @@
       transform: translateY(-1.5px); /* rise a little */
       color: #ccc;                    /* optional: match your icon hover color */
     }
+    .arrow-to-home {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
 
-
-
-
+    .arrow-to-home:hover {
+      transform: translateY(-1.5px); /* match profile/social icons */
+      color: #ccc;                  /* optional hover color */
+    }
 </style>
 <div id="particles-js"></div>
 <div class="stars"></div>
@@ -174,6 +185,11 @@
 <div class="blur-box">
   <a href="/home" class="profile-pic-link">
     <img class="profile-pic" src="/assets/img/profile.png" alt="Rachit Jaiswal">
+    <a href="/home" id="arrow-link" class="arrow-to-home" title="Go to Home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+      </svg>
+    </a>
   </a>
   <div class="profile-text">
     <h1 style="font-family: 'WDXL Lubrifont SC', sans-serif;"><a href="/home" class="name-link">Rachit Jaiswal</a></h1>
@@ -276,4 +292,12 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const arrow = document.getElementById("arrow-link");
+      if (arrow) arrow.style.opacity = 1;
+    }, 10000); // 10 seconds
+  });
 </script>
