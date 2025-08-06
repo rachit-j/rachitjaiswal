@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {% include fonts.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --font-heading: 'WDXL Lubrifont SC', sans-serif;
+      --font-body: 'Oxanium', sans-serif;
+    }
+    body {
+      font-family: var(--font-body);
+      background-color: black;
+      color: white;
+    }
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+    }
+
+    .project-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  {% include header.html %}
+
+  <main class="min-h-screen px-6 py-24">
+    {{ content }}
+  </main>
+</body>
+</html>
