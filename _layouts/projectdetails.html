@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {% include fonts.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 1) Collapse plugin first -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <!-- 2) Then Alpine core -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+  <style>
+    /* hide the “open in new tab” link by default */
+    details summary .open-tab {
+    display: none;
+    }
+
+    /* when <details> is expanded, show it */
+    details[open] summary .open-tab {
+    display: inline-flex;  /* or inline-block */
+    }
+
+    /* wrapper for the collapsible content */
+    .details-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.65s ease;
+    }
+
+
+    /* when <details> is open, allow it to expand */
+    details[open] .details-content {
+    max-height: 800px; /* big enough for your 500px iframe + padding */
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  {% include header.html %}
+
+  <main class="max-w-6xl mx-auto px-6 py-24 space-y-24">
+
+    <!-- Title & Description -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <!-- Left Column: Title, Description, Papers -->
+        <div class="md:col-span-2 space-y-6">
+            <div>
+            <h1 class="text-4xl font-bold text-cyan-400">{{ page.project_name }}</h1>
+            <p class="text-gray-300 text-lg mt-2">{{ page.description }}</p>
+            </div>
+
+            <div class="prose prose-invert max-w-none">
+            {{ content }}
+            </div>
+
+            {% if page.papers %}
+            <div class="space-y-4">
+                {% for paper in page.papers %}
+                <div x-data="{ open: false }"
+                    class="bg-black/50 backdrop-blur-md border border-white/10 rounded-lg p-4">
+
+                    <!-- Header (clickable) -->
+                    <div @click="open = !open"
+                        class="cursor-pointer text-cyan-300 font-medium text-lg flex justify-between items-center">
+                    <span>{{ paper.title }}</span>
+
+                    <!-- Only show when open -->
+                    <a href="{{ paper.url }}" target="_blank"
+                        x-show="open"
+                        class="ml-4 text-white hover:text-cyan-300 transition"
+                        @click.stop
+                        title="Open PDF in new tab">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                        <path fill-rule="evenodd"
+                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                    </a>
+                    </div>
+
+                    <!-- Collapsible PDF viewer -->
+                    <div x-show="open" x-collapse class="mt-4">
+                    <iframe src="{{ paper.url }}"
+                            class="w-full h-[500px] border border-white/20 rounded"
+                            loading="lazy">
+                    </iframe>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+
+
+        </div>
+
+        <!-- Right Column: Logo & Buttons -->
+        <div class="space-y-6">
+            {% if page.logo %}
+            <img src="{{ page.logo }}" alt="Logo" class="w-full h-auto object-contain rounded-lg border border-white/10 shadow" />
+            {% endif %}
+
+            {% if page.links %}
+            <div class="flex flex-col gap-3">
+                {% for link in page.links %}
+                <a href="{{ link.url }}" target="_blank"
+                    class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-black/40 border border-cyan-300 rounded-full hover:bg-cyan-300 hover:text-black transition duration-200 backdrop-blur-md shadow-md">
+                    {% if link.icon %}
+                    <i class="{{ link.icon }} mr-2"></i>
+                    {% endif %}
+                    {{ link.name }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        </div>
+
+
+    <!-- Related Blog Posts -->
+    {% assign related_posts = site.posts 
+     | where:"project_tag", page.project_tag %}
+
+    {% if related_posts.size > 0 %}
+    <div>
+        <h2 class="text-2xl font-bold mb-4 text-cyan-300">Related Blog Posts</h2>
+        <div class="space-y-6">
+        {% for post in related_posts %}
+            <a href="{{ post.url }}" class="block hover:bg-white/5 p-4 border border-white/10 rounded-lg transition">
+            <h3 class="text-lg font-semibold text-white">{{ post.title }}</h3>
+            <p class="text-sm text-gray-400 mt-1">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            </a>
+        {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+  </main>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    const wrap = d.querySelector(".details-content");
+
+    // Ensure initial state
+    wrap.style.maxHeight = "0px";
+
+    d.addEventListener("toggle", () => {
+      if (d.open) {
+        // OPEN: animate down
+        wrap.style.transition = "max-height 0.65s ease";
+        // from zero to full height
+        const fullH = wrap.scrollHeight;
+        wrap.style.maxHeight = fullH + "px";
+
+        // after open transition ends, clear inline max-height so content can resize naturally
+        wrap.addEventListener("transitionend", function te(e) {
+          if (e.propertyName === "max-height") {
+            wrap.style.maxHeight = "none";
+            wrap.removeEventListener("transitionend", te);
+          }
+        });
+      } else {
+        // CLOSE: animate up
+        // first fix height to its current rendered height
+        const currH = wrap.getBoundingClientRect().height;
+        wrap.style.maxHeight = currH + "px";
+        // force repaint
+        void wrap.offsetHeight;
+        // then animate to zero
+        wrap.style.transition = "max-height 0.65s ease";
+        wrap.style.maxHeight = "0px";
+      }
+    });
+  });
+});
+</script>
+
+
+
+</body>
+</html>

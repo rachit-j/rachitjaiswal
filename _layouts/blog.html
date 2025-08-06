@@ -1,0 +1,52 @@
+<!-- _layouts/blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+  {% endif %}
+
+  {% include fonts.html %}
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+  {% include header.html %}
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <article class="prose prose-invert lg:prose-lg">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-cyan-400 mb-2">{{ page.title }}</h1>
+        <p class="text-sm text-gray-400">{{ page.date | date: "%B %-d, %Y" }}</p>
+
+        {% if page.tags %}
+          <p class="mt-2">
+            <span class="text-gray-400">Tags:</span>
+            {% for tag in page.tags %}
+              <a href="/tags/{{ tag | slugify }}" class="text-cyan-300 hover:text-cyan-100">
+                {{ tag }}
+              </a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+
+        <!-- {% if page.project_tag %}
+          <p class="mt-2">
+            <span class="text-gray-400">Project:</span>
+            <a href="/projects/{{ page.project_tag }}" class="text-cyan-300 hover:text-cyan-100">
+              {{ page.project_tag }}
+            </a>
+          </p>
+        {% endif %} -->
+      </header>
+
+      {{ content }}
+
+    </article>
+  </main>
+
+</body>
+</html>
