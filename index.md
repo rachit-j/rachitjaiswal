@@ -1,6 +1,6 @@
 ---
 layout: landing
-title: Welcome
+title: Rachit Jaiswal
 ---
 
 <h1 style="font-family: 'Oxanium', sans-serif;">Rachit Jaiswal</h1>
