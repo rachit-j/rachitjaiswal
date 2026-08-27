@@ -1,0 +1,17 @@
+- institution: University of Washington
+  school: Paul G. Allen School
+  program: "Computer Engineering (switching to Computer Science)"
+  timeframe: "Sep 2025 – TODO: VERIFY"
+  description: Studying computer engineering and computer science with a focus on software development, systems design, and emerging technologies.
+  logo: /assets/resume/img/uw_logo.png
+  current: "TODO: VERIFY"
+  featured: true
+
+- institution: Del Norte High School
+  program: Student
+  timeframe: "Aug 2021 – Jun 2025"
+  description: Graduated after balancing academics with robotics, cybersecurity, and student-organization leadership.
+  logo: /assets/resume/img/dnhs_logo.png
+  current: false
+  featured: false
+  verification: "TODO: VERIFY GPA and awards before publishing."

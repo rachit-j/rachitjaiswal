@@ -1,0 +1,19 @@
+{
+  "name": "rachitjaiswal-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Frontend asset pipeline for the Jekyll portfolio.",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "esbuild src/styles.css --bundle --minify --outfile=assets/dist/site.css && esbuild src/overrides.css --bundle --minify --outfile=assets/dist/overrides.css",
+    "build:js": "esbuild src/main.js --bundle --minify --format=esm --target=es2018 --outfile=assets/dist/site.js",
+    "watch:css": "esbuild src/styles.css --bundle --sourcemap --outfile=assets/dist/site.css --watch",
+    "watch:js": "esbuild src/main.js --bundle --sourcemap --format=esm --target=es2018 --outfile=assets/dist/site.js --watch"
+  },
+  "dependencies": {
+    "animejs": "^4.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

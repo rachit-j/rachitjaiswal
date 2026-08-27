@@ -1,0 +1,181 @@
+- slug: kasmv2
+  title: KasmV2
+  short_title: KasmV2
+  timeframe: "2024 – TODO: VERIFY"
+  summary: District-wide cloud virtual machines for equitable computing access in Poway Unified School District.
+  categories: [Systems]
+  role: SCRUM Master / Systems Engineer Intern
+  organization: KasmV2
+  technologies: [AWS, Docker, Ansible, Terraform, SSH, Shell]
+  impact: "TODO: VERIFY current deployment and usage status."
+  image: /assets/resume/img/kasmv2_logo.png
+  links:
+    - label: GitHub
+      url: https://github.com/nighthawkcodingsociety/kasm-multi-server
+    - label: Website
+      url: https://nighthawkcoders.github.io/portfolio_2025/kasm/pages/intro
+    - label: PUSD Version
+      url: https://open-coding-society.github.io/kasm-platform/
+  featured: true
+  archived: false
+
+- slug: scorpio
+  title: Scorpio
+  short_title: Scorpio
+  timeframe: "2019 – 2024"
+  summary: FIRST Tech Challenge robotics work spanning robot design, fabrication, autonomous vision, and control systems.
+  categories: [Robotics, AI]
+  role: Captain & Programming Lead
+  organization: FTC Team Scorpio
+  technologies: [OpenCV, Android Studio, FTC SDK, PID, finite state machines]
+  impact: "TODO: VERIFY competition rankings and awards before publishing."
+  image: /assets/resume/img/ftc_logo.png
+  links:
+    - label: 2023–2024 Season GitHub
+      url: https://github.com/rachit-j/cs-2023-2024
+    - label: 2022–2023 Season GitHub
+      url: https://github.com/lleosunn/pp-2022-2023
+  featured: true
+  archived: false
+
+- slug: trinamix
+  title: TrinamiX Material Identification
+  short_title: TrinamiX
+  timeframe: "Aug 2023 – Nov 2023"
+  summary: Material-identification work using laser speckle analysis, computer vision, and machine learning.
+  categories: [AI, Research]
+  role: ML Intern
+  organization: TrinamiX
+  technologies: [Python, TensorFlow, ImageJ, laser speckle analysis, fractal dimension]
+  impact: Specific results are unavailable because of an NDA.
+  image: /assets/resume/img/trinamix_logo.png
+  links:
+    - label: TrinamiX
+      url: https://trinamixsensing.com/
+  featured: true
+  archived: false
+
+- slug: ucmerced
+  title: AI Safety and Reliability Research at UC Merced
+  short_title: UC Merced AI Safety
+  timeframe: "2023 – TODO: VERIFY"
+  summary: Research on the safety and reliability of large language models in safety-critical systems.
+  categories: [AI, Research]
+  role: AI Safety Researcher
+  organization: UC Merced
+  technologies: [SPIN, Python, formal verification, LLM evaluation]
+  impact: "TODO: VERIFY research scope, dates, and publishable outcomes."
+  image: /assets/resume/img/ucmerced_logo.png
+  links:
+    - label: UC Merced Project Page
+      url: https://ayush-pandey.github.io/projects/summer_2024.html
+  featured: true
+  archived: false
+
+- slug: artemis
+  title: Artemis
+  short_title: Artemis
+  timeframe: "TODO: VERIFY"
+  summary: Gesture-controlled AI assistant on Raspberry Pi combining computer vision, voice interaction, and command handling.
+  categories: [AI, Robotics]
+  role: Personal project
+  organization: Personal
+  technologies: [Raspberry Pi, OpenCV, GPT API]
+  impact: "TODO: VERIFY current project status."
+  image: /assets/resume/img/artemis_logo.png
+  links:
+    - label: GitHub
+      url: https://github.com/rachit-j/Artemis
+  featured: false
+  archived: true
+
+- slug: codemaxxers
+  title: CodeMaxxers
+  short_title: CodeMaxxers
+  timeframe: "TODO: VERIFY"
+  summary: Collaborative computer science game developed by a team of 15 students.
+  categories: [Systems]
+  role: SCRUM Master
+  organization: CodeMaxxers
+  technologies: [Java, Node.js, Flask, WebSockets]
+  impact: "TODO: VERIFY current public availability and project status."
+  image: /assets/resume/img/codemaxxers_logo.png
+  links:
+    - label: Project Page
+      url: https://codemaxxers.github.io/codemaxxerFrontend/
+    - label: Documentation
+      url: https://github.com/Codemaxxers/Issues/issues
+    - label: GitHub
+      url: https://github.com/Codemaxxers
+  featured: false
+  archived: true
+
+- slug: horizon
+  title: Horizon
+  short_title: Horizon
+  timeframe: "Jun 2023 – Sep 2023"
+  summary: Computer-vision research for classifying plastic bottles.
+  categories: [AI, Research]
+  role: AI & Computer Vision Researcher
+  organization: Horizon Academic
+  technologies: [TensorFlow, OpenCV, WARP dataset]
+  impact: "TODO: VERIFY reported accuracy and publication details before publishing."
+  image: /assets/resume/img/horizon_logo.png
+  links:
+    - label: Horizon Academic Journal 4.2
+      url: https://www.scribd.com/document/719281636/Horizon-Academic-Research-Journal-Vol-4-No-2
+    - label: Horizon Academic
+      url: https://horizoninspires.com/
+  documents:
+    - label: Research paper preview
+      url: /assets/projects/horizon/Horizon_Research_Paper_Preview.pdf
+  featured: false
+  archived: true
+
+- slug: medilink
+  title: MediLink
+  short_title: MediLink
+  timeframe: "2024 – TODO: VERIFY"
+  summary: Blockchain-inspired universal electronic medical-record system prototyped for the Big Data for San Diego Hackathon.
+  categories: [Systems, AI]
+  role: Team member
+  organization: TEAM-GOJO
+  technologies: [blockchain-inspired records, AI]
+  impact: "TODO: VERIFY award, role, and project outcomes before publishing."
+  image: /assets/resume/img/medilink_logo.png
+  links:
+    - label: Hackathon submission
+      url: https://github.com/TEAM-GOJO/Team-308
+    - label: Big Data for San Diego Hackathon
+      url: https://bigdataforsandiego.github.io/
+    - label: Site / wireframe
+      url: https://team-gojo.github.io/MediLink/dashboard
+    - label: GitHub organization
+      url: https://github.com/TEAM-GOJO
+  documents:
+    - label: Hackathon presentation
+      url: /assets/projects/medilink/108-teamGOJO.pdf
+    - label: Visual advertisement
+      url: /assets/projects/medilink/MediLink-visual.pdf
+  featured: false
+  archived: true
+
+- slug: rift
+  title: RIFT
+  short_title: RIFT
+  timeframe: "TODO: VERIFY"
+  summary: Cloud infrastructure management tool for simplifying AWS EC2 deployment and monitoring for students and educators.
+  categories: [Systems]
+  role: "TODO: VERIFY"
+  organization: RIFT
+  technologies: [AWS EC2, Cockpit, Terraform, AWS API]
+  impact: "TODO: VERIFY reported usage and current project status."
+  image: /assets/resume/img/rift_logo.png
+  links:
+    - label: RIFT Website
+      url: https://rift24.github.io/RIFT-Frontend/
+    - label: GitHub
+      url: https://github.com/RIFT24
+  featured: false
+  archived: true
+

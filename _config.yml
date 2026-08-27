@@ -20,17 +20,34 @@
 
 title: Rachit Jaiswal
 email: rjaiswal.sd.77@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My name is Rachit Jaiswal, and I am a software engineer. This is my personal blog where I share my thoughts, experiences, and insights on software development, technology, and life in general.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rachitjaiswal.com" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: 
-github_username:  rachit-j
+description: "Technical work across AI, robotics, systems, and research."
+baseurl: ""
+url: "https://rachitjaiswal.com"
+github_username: rachit-j
+github_url: "https://github.com/rachit-j"
+linkedin_url: "https://www.linkedin.com/in/rachit-jaiswal-a534b5196/"
+lang: en
+timezone: America/New_York
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+permalink: /writing/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/profile-1600.jpg
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -40,14 +57,12 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - node_modules/
+  - src/
+  - package.json
+  - package-lock.json
+  - esbuild.config.mjs
+  - vendor/
+  - docs/
+  - plan.md

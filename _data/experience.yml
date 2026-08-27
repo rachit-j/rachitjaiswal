@@ -1,0 +1,120 @@
+- organization: KasmV2
+  role: SCRUM Master / Systems Engineer Intern
+  timeframe: "May 2024 – TODO: VERIFY"
+  description: Led a four-member team to deploy a cloud-based multi-server system across five high schools, providing scalable computing environments for students and teachers using Kasm on AWS.
+  highlights: [AWS, Docker, Flask, Cloud Architecture, Team Leadership, Systems Engineering]
+  category: Systems
+  logo: /assets/resume/img/kasmv2_logo.png
+  url: https://github.com/nighthawkcodingsociety/kasm-multi-server
+  featured: true
+
+- organization: TrinamiX
+  role: ML Intern
+  timeframe: "Aug 2023 – Nov 2023"
+  description: Developed ML systems using laser speckle patterns and fractal dimension calculations to classify material surfaces.
+  highlights: [Python, TensorFlow, ImageJ, Machine Learning, Surface Analysis, Fractal Geometry]
+  category: AI
+  logo: /assets/resume/img/trinamix_logo.png
+  url: https://trinamixsensing.com/
+  featured: true
+
+- organization: UC Merced
+  role: AI Safety Researcher
+  timeframe: "2023 – TODO: VERIFY"
+  description: Conducted formal-verification and control-theory-based testing of LLMs for safety-critical system interactions.
+  highlights: [SPIN, Python, Formal Verification, LLM Evaluation, AI Safety]
+  category: Research
+  logo: /assets/resume/img/ucmerced_logo.png
+  url: https://ayush-pandey.github.io/projects/summer_2024.html
+  featured: true
+
+- organization: ColorTokens
+  role: Security Intern
+  timeframe: "Jun 2022 – Aug 2022"
+  description: Secured Linux systems, hardened Apache2 and Nginx environments, and developed documentation to mitigate cybersecurity vulnerabilities in critical infrastructure.
+  highlights: [Linux, Apache, Nginx, Cybersecurity, Automation, Network Security]
+  category: Systems
+  logo: /assets/resume/img/colortokens_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
+- organization: Tech Space x Qualcomm
+  role: Founder & AI Research Lead
+  timeframe: May 2023
+  description: Led a high-school team developing AI recycling solutions with the Qualcomm Innovators Development Kit.
+  highlights: [QIDK, Python, OpenCV, AI Prototyping, Product Innovation]
+  category: AI
+  logo: /assets/resume/img/qualcomm_logo.png
+  url: https://developer.qualcomm.com/blog/high-school-project-computer-vision-and-robotics-enhance-waste-recycling
+  featured: false
+
+- organization: Horizon Academic
+  role: AI & Computer Vision Researcher
+  timeframe: "Jun 2023 – Sep 2023"
+  description: Created an image-recognition system for plastic-bottle classification.
+  highlights: [TensorFlow, OpenCV, Image Classification, Dataset Design]
+  category: Research
+  logo: /assets/resume/img/horizon_logo.png
+  url: https://horizoninspires.com/
+  featured: false
+
+- organization: FTC Robotics
+  role: Captain & Programming Lead
+  timeframe: "Jun 2019 – Apr 2024"
+  description: Led Team 15171's programming work, including vision systems, PID loops, finite-state machines, and member mentorship.
+  highlights: [OpenCV, Android Studio, FTC SDK, Robotics, Computer Vision]
+  category: Robotics
+  logo: /assets/resume/img/ftc_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
+- organization: Cambridge Centre for International Research
+  role: Researcher
+  timeframe: "Jun 2023 – Oct 2023"
+  description: Developed a Hindi-English code-switched translation system using machine-learning techniques.
+  highlights: [Python, NLP, NCRF++, Code-switching, Language Modeling]
+  category: Research
+  logo: /assets/resume/img/ccir_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
+- organization: Greater San Diego Science and Engineering Fair
+  role: Participant
+  timeframe: Mar 2023
+  description: Developed a plastic-sorting system using machine learning, OpenCV, and a robotic arm.
+  highlights: [OpenCV, Python, FTC SDK, Computer Vision, Hardware Control]
+  category: Robotics
+  logo: /assets/resume/img/gsdsef_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
+- organization: CyberPatriot
+  role: National Champion
+  timeframe: "Jun 2019 – TODO: VERIFY"
+  description: Participated in cybersecurity competitions focused on Linux, Windows, and network security.
+  highlights: [Linux, Windows, Cisco Packet Tracer, VMware, Cybersecurity]
+  category: Systems
+  logo: /assets/resume/img/cyberpatriot_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
+- organization: Tech Space
+  role: Founder & President
+  timeframe: "Dec 2022 – TODO: VERIFY"
+  description: Created a student-led organization introducing peers to emerging technologies through workshops, demos, and engineer collaborations.
+  highlights: [Leadership, STEM Outreach, Emerging Technology]
+  category: Community
+  logo: /assets/resume/img/techspace_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
+- organization: Aerospace & Rocketry Club
+  role: President
+  timeframe: "Jun 2023 – TODO: VERIFY"
+  description: Managed flight-based projects using drones and model rockets, focused on aerodynamics, telemetry, and STEM outreach.
+  highlights: [Flight Controller, IMU, Rocket Engines, Leadership, STEM Outreach]
+  category: Community
+  logo: /assets/resume/img/aerospace_logo.png
+  url: "TODO: VERIFY"
+  featured: false
+
