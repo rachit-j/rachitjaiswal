@@ -1,4 +1,6 @@
 import { animate, onScroll, splitText } from "animejs";
+import { initializeFlowField } from "./flow-field.js";
+import { initializeLandingTypewriter } from "./landing.js";
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -83,3 +85,5 @@ setMenu();
 revealHero();
 revealSections();
 setWorkFilters();
+initializeFlowField();
+initializeLandingTypewriter();

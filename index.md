@@ -7,10 +7,17 @@ description: Technical work across AI, robotics, systems, and research.
 {% assign profile = site.data.site %}
 {% assign featured_work = site.data.projects | where: 'featured', true %}
 {% assign featured_experience = site.data.experience | where: 'featured', true %}
-<section class="hero site-shell" aria-labelledby="hero-title">
-  <p class="eyebrow hero__eyebrow" data-hero-item>AI / ROBOTICS / SYSTEMS</p>
-  <h1 id="hero-title" class="hero__name" data-hero-name><span>Rachit</span><span>Jaiswal</span></h1>
-  <div class="hero__statement" data-hero-item><p>{{ profile.hero_statement }}</p><a href="#selected-work">Explore selected work <span aria-hidden="true">↓</span></a></div>
+<section class="hero" aria-labelledby="hero-title" data-landing-hero>
+  <canvas class="hero__flow-field" data-flow-field aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__content site-shell" data-hero-content>
+    <h1 id="hero-title" class="hero__identity">
+      <span class="hero__typewriter" data-typewriter aria-hidden="true">I am Rachit Jaiswal</span><span class="hero__cursor" aria-hidden="true">|</span>
+      <span class="sr-only">I am Rachit Jaiswal</span>
+    </h1>
+    <p class="hero__domains">AI <span aria-hidden="true">•</span> Robotics <span aria-hidden="true">•</span> Systems Engineering</p>
+    <a class="hero__scroll" href="#selected-work"><span class="sr-only">Scroll to selected work</span><span class="hero__scroll-label" aria-hidden="true">Scroll to explore</span><span class="hero__scroll-line" aria-hidden="true"></span></a>
+  </div>
 </section>
 
 <section id="selected-work" class="site-shell home-section" aria-labelledby="selected-work-title">
