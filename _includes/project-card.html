@@ -1,0 +1,7 @@
+{% assign timeframe = include.project.timeframe | replace: ' – TODO: VERIFY', '' | replace: 'TODO: VERIFY', '' %}
+<article class="project-card{% if include.project.featured %} project-card--featured{% endif %}" data-project data-categories="{{ include.project.categories | join: ' ' | downcase }}">
+  <a class="project-card__link" href="{{ '/projects/' | append: include.project.slug | append: '/' | relative_url }}">
+    <div class="project-card__media">{% if include.project.image %}<img src="{{ include.project.image | relative_url }}" alt="{{ include.project.title }} mark" loading="lazy">{% endif %}<span class="project-card__index" aria-hidden="true">{{ include.index | default: '—' }}</span></div>
+    <div class="project-card__content"><p class="eyebrow">{{ include.project.categories | join: ' · ' }}{% if timeframe != '' %} <span> / </span> {{ timeframe }}{% endif %}</p><h3>{{ include.project.short_title | default: include.project.title }} <span aria-hidden="true">→</span></h3><p>{{ include.project.summary }}</p><dl class="project-card__meta"><div><dt>Role</dt><dd>{{ include.project.role | replace: 'TODO: VERIFY', 'Not publicly specified' }}</dd></div><div><dt>Context</dt><dd>{{ include.project.organization }}</dd></div></dl></div>
+  </a>
+</article>

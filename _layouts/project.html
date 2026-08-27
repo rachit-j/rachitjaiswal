@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% assign project = site.data.projects | where: 'slug', page.project | first %}
+{% assign timeframe = project.timeframe | replace: ' – TODO: VERIFY', '' | replace: 'TODO: VERIFY', '' %}
+<article class="case-study">
+  <header class="case-study__hero site-shell"><div><p class="eyebrow">{{ project.categories | join: ' · ' }}{% if timeframe != '' %} <span> / </span> {{ timeframe }}{% endif %}</p><h1>{{ project.title }}</h1><p class="lede">{{ project.summary }}</p></div><div class="case-study__mark">{% if project.image %}<img src="{{ project.image | relative_url }}" alt="{{ project.title }} mark">{% endif %}</div></header>
+  <div class="case-study__details site-shell"><dl><div><dt>Role</dt><dd>{{ project.role | replace: 'TODO: VERIFY', 'Not publicly specified' }}</dd></div><div><dt>Organization</dt><dd>{{ project.organization }}</dd></div><div><dt>Technologies</dt><dd>{{ project.technologies | join: ', ' }}</dd></div></dl><div class="case-study__body">{{ content | markdownify }}</div></div>
+  {% if project.links %}<nav class="case-study__links site-shell" aria-label="{{ project.title }} links">{% for link in project.links %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>{% endfor %}{% for document in project.documents %}<a href="{{ document.url | relative_url }}">{{ document.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</nav>{% endif %}
+</article>
