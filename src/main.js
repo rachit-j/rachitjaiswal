@@ -1,6 +1,7 @@
 import { animate, onScroll, splitText } from "animejs";
 import { initializeFlowField } from "./flow-field.js";
 import { initializeLandingTypewriter } from "./landing.js";
+import { initializeStoryMotion } from "./story-motion.js";
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -87,3 +88,4 @@ revealSections();
 setWorkFilters();
 initializeFlowField();
 initializeLandingTypewriter();
+initializeStoryMotion();

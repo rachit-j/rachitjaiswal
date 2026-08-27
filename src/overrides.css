@@ -2,3 +2,9 @@
 .not-found h2 { margin: .7rem 0; font-size: clamp(3rem, 7vw, 7rem); line-height: .85; letter-spacing: -.07em; }
 .not-found p:not(.eyebrow) { color: var(--muted); font-size: 1.1rem; }
 .about-contact a { overflow-wrap: anywhere; }
+.page-home .site-header.is-scrolled { position: fixed; background: rgba(5, 7, 11, .92); border-bottom: 1px solid rgba(68, 217, 255, .22); box-shadow: 0 8px 28px rgba(0, 0, 0, .28); }
+.timeline-frame { position: relative; }
+.timeline-path { position: absolute; inset: 0 auto 0 0; width: 13px; height: 100%; overflow: visible; }
+.timeline-path path { stroke: #44d9ff; stroke-width: 1; stroke-dasharray: 100; stroke-dashoffset: 100; filter: drop-shadow(0 0 4px rgba(68,217,255,.7)); }
+.experience-timeline:before { display: none; }
+@media (max-width: 760px) { .timeline-path { left: 0; } }
