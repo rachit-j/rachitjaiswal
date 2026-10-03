@@ -8,9 +8,12 @@ tags:
   - AWS
   - Teaching
 project_tag: rift
+
+excerpt: >-
+  Notes from a 2024 classroom deployment project on CORS configuration and environment variables.
+archive_notice: true
 ---
 
-# Cors
 Cross origin resource sharing, or cors, is something that configures security for requests with additional headers and can restrict what kind of requests and where the requests come from.
 
 Here is how you configure them in your backend:
@@ -37,7 +40,6 @@ In SecurityConfig.java:
 
 ```
 
-# DotENV
 
 Sick of your API Keys being exposed in your code? Sick of them being placed in github? Sick of them being accessable on the web? DotENV can change that!
 

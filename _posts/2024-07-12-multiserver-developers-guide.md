@@ -7,6 +7,10 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  Developer documentation for the KasmV2 multi-server installer, including setup and implementation notes.
+archive_notice: true
 ---
 
 
@@ -673,22 +677,22 @@ Then we ask the user which passwords they want to set for their Kasm deployment:
 
 ```sh
 # Prompt user for passwords with default values
-read -p "Enter user password [default: password]: " user_password
+read -p "Enter user password [default: <set-a-secure-password>]: " user_password
 user_password=${user_password:-password}
 
-read -p "Enter admin password [default: password]: " admin_password
+read -p "Enter admin password [default: <set-a-secure-password>]: " admin_password
 admin_password=${admin_password:-password}
 
-read -p "Enter database password [default: password]: " database_password
+read -p "Enter database password [default: <set-a-secure-password>]: " database_password
 database_password=${database_password:-password}
 
-read -p "Enter redis password [default: password]: " redis_password
+read -p "Enter redis password [default: <set-a-secure-password>]: " redis_password
 redis_password=${redis_password:-password}
 
-read -p "Enter manager token [default: password]: " manager_token
+read -p "Enter manager token [default: <set-a-secure-password>]: " manager_token
 manager_token=${manager_token:-password}
 
-read -p "Enter registration token [default: password]: " registration_token
+read -p "Enter registration token [default: <set-a-secure-password>]: " registration_token
 registration_token=${registration_token:-password}
 ```
 
@@ -773,10 +777,10 @@ The table of passwords is shown below:
 
 | Variable             | Question                                               | Expected Responses                                                                                                                                                                              |
 |----------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kasm User Password   | Enter user password [default: password]                | Asks the user for the local kasm user's (user@kasm.local) password, and has a default (press ENTER) password of "password".                                                                     |
-| Admin Password       | Enter admin password [default: adminpassword]          | Asks the user for the admin user's password, and has a default (press ENTER) password of "adminpassword".                                                                                       |
-| DB Password          | Enter database password [default: dbpassword]          | Asks the user for the database user's password, and has a default (press ENTER) password of "dbpassword".                                                                                       |
-| Redis Password       | Enter Redis password [default: redispassword]          | Asks the user for the Redis user's password, and has a default (press ENTER) password of "redispassword".                                                                                       |
+| Kasm User Password   | Enter user password [default: <set-a-secure-password>]                | Asks the user for the local kasm user's (<your-kasm-user>) password, and has a default (press ENTER) password supplied by the operator.                                                                     |
+| Admin Password       | Enter admin password [default: <set-a-secure-password>]          | Asks the user for the admin user's password, and has a default (press ENTER) password of <set-a-secure-password>.                                                                                       |
+| DB Password          | Enter database password [default: <set-a-secure-password>]          | Asks the user for the database user's password, and has a default (press ENTER) password of <set-a-secure-password>.                                                                                       |
+| Redis Password       | Enter Redis password [default: <set-a-secure-password>]          | Asks the user for the Redis user's password, and has a default (press ENTER) password of <set-a-secure-password>.                                                                                       |
 | Manager Token        | Enter manager token [default: managertoken]            | Asks the user for the manager token, and has a default (press ENTER) token of "managertoken".                                                                                                   |
 | Registration Token   | Enter registration token [default: registrationtoken]  | Asks the user for the registration token, and has a default (press ENTER) token of "registrationtoken".                                                                                         |
 
@@ -1045,8 +1049,8 @@ At the end, the installer runs some cleanup jobs and outputs relevant informatio
       - "Redis Password: {{ redis_password }}"
       - "Manager Token: {{ manager_token }}"
       - "Registration Token: {{ registration_token }}"
-      - "user@kasm.local password: {{ user_password }}"
-      - "admin@kasm.local password: {{ admin_password }}"
+      - "<your-kasm-user> password: {{ user_password }}"
+      - "<your-admin-user> password: {{ admin_password }}"
   run_once: true
 
 - name: Write credentials to inventory

@@ -7,6 +7,10 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  Configuring persistent profiles for a Kasm workspace.
+archive_notice: true
 ---
 
 <p>Persistent data or persistent profiles is a setup that allows users to retain their data even after their images close using the storage availible on the agent servers. While this is beneficial, we recommend important data be backed up in Git, or moved into Drive.</p>

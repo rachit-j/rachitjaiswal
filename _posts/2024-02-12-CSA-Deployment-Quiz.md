@@ -8,9 +8,12 @@ tags:
   - AWS
   - Teaching
 project_tag: rift
+
+excerpt: >-
+  A deployment exercise originally written for a high-school computer science class.
+archive_notice: true
 ---
 
-# Foreword
 
 Hello everyone! Today you will be graded on your capabilities in deploying a backend server from scratch on your own instance. You are permitted to use any outside resources, including this website, except for other people (don't try and bend the rules we will know). 
 
@@ -24,7 +27,6 @@ You will be setting up a Java Spring-Boot Server on your own Amazon EC2 Instance
 
 **Whoever does not have an instance, please let me know.**
 
-# Critical Information
 
 Each person will have their own EC2 Instance that has its own ID based on the ID you have provided at the start of the year, which is shown below. You will be deploying on your OWN EC2 instance, NOT the RIFT servers. A table with all the people, their ID's, and the randomized ports is shown below. 
 
@@ -34,11 +36,11 @@ You will also have to change the port to a randomized port. We will be running a
 
 You must also change the homepage of the quiz backend to have your title be your [NAME]:[Github-ID]. This should be visible on the page (I would change the Java Homepage title).
 
-You must then create a route53 route on the test subdomain with your ID as the prefix. It must be routed to your container. (ex. 84.stu.nighthawkcodingsociety.com)
+You must then create a route53 route on the test subdomain with your ID as the prefix. It must be routed to your container. (for example, a student ID prefix on the historical classroom domain)
 
 You must finally have https. If you do not know how to do this, start looking around.
 
-# Submission and Grading
+## Submission and Grading
 
 Once all changes have been made as per the requirements, please come up to the front with your device. You will be asked to have an EC2 Terminal open for us to validate your port, and you must have an open runtime on your browser. 
 
@@ -52,7 +54,7 @@ In total, you must have **three** screenshots.
 Example of website security panel:
 ![example](https://rackets-assets.vercel.app/assets/csa_quiz/example_submission.png)
 
-# CSA Quiz Data
+## CSA Quiz Data
 
 <div id="csv-root">Loading data...</div>
 

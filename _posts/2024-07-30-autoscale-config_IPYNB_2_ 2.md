@@ -7,6 +7,10 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  A historical guide to configuring and testing Kasm Docker-agent autoscaling.
+archive_notice: true
 ---
 
 ## Step 1: Licensing the Kasm Workspaces Installation

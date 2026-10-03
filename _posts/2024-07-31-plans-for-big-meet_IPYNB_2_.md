@@ -7,6 +7,10 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  An agenda for the KasmV2 presentation on August 1, 2024.
+archive_notice: true
 ---
 
 <p>Plans for big meet</p>

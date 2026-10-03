@@ -222,6 +222,8 @@ Not in the reference; extend `signal.css` with a `.prose` section that follows t
 
 Article pages use a `.cs-head`-style header: crumb "Notebook," a title in `.h-page` at smaller size, and mono original date. The archive notice uses the `.note` style (white, hair border, 3px violet left rule). Document any new classes here.
 
+Signal prose extension classes: `.post-page` marks the article wrapper; `.post-head` spaces the article header, `.post-title` scales its title below a case-study title, `.post-date` sets the original date in mono, and `.post-prose` spaces the article body. `.archive-notice` and `.archive-banner` present historical context with a violet left rule. `.project-media` labels preserved legacy research media. The `.prose` rules also cover tables, code, figures, and lists; tables scroll inside their own viewport on narrow screens.
+
 ### 7.15 Scroll tracker (`.tracker`)
 A 48px fixed box at the bottom right holding the undamped 2 : 3 harmonograph. The line fills violet up to a moving dot as the page scrolls. It is decorative (`aria-hidden`), appears on every page, and is hidden over the cover.
 

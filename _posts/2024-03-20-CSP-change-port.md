@@ -8,9 +8,12 @@ tags:
   - AWS
   - Teaching
 project_tag: rift
+
+excerpt: >-
+  A short reference for configuring application and Docker ports in a Flask deployment.
+archive_notice: true
 ---
 
-# Places to Change Flask Port
 
 
 There are three places to change your port for a spring boot project.

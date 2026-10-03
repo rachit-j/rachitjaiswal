@@ -1,4 +1,29 @@
 ---
-layout: blogslist
-title: Blog
+layout: signal
+title: Writing archive
+nav: notebook
+description: Technical notes and archived writing from project and classroom work.
 ---
+<main id="main" class="wrap page">
+  <header class="page-head">
+    <h1 class="h-page ruled">Writing archive</h1>
+    <p class="lede">Technical notes, project guides, and classroom writing, preserved at their original URLs.</p>
+  </header>
+  <section aria-labelledby="selected-writing">
+    <div class="sec-head"><h2 class="h-sec" id="selected-writing">Selected writing</h2></div>
+    <div class="rows">
+      {% for item in site.data.blog_migration %}{% if item.featured %}
+      <a class="row" href="{{ item.path }}"><span><span class="row-t">{{ item.title }}</span><span class="row-ctx">{{ item.date }} · {{ item.kind }}</span></span><span class="row-s">{{ item.excerpt }}</span></a>
+      {% endif %}{% endfor %}
+    </div>
+  </section>
+  <section class="archive-list" aria-labelledby="archive-writing">
+    <div class="sec-head"><h2 class="h-sec" id="archive-writing">Archive</h2></div>
+    <p class="note archive-banner">These posts were written for 2024 classroom and project environments. Commands and interfaces may differ in current versions.</p>
+    <div class="rows">
+      {% for item in site.data.blog_migration %}{% unless item.featured %}
+      <a class="row" href="{{ item.path }}"><span><span class="row-t">{{ item.title }}</span><span class="row-ctx">{{ item.date }} · {{ item.kind }}</span></span><span class="row-s">{{ item.excerpt }}</span></a>
+      {% endunless %}{% endfor %}
+    </div>
+  </section>
+</main>

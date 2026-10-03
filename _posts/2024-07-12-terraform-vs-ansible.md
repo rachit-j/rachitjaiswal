@@ -7,6 +7,10 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  How infrastructure provisioning and configuration management fit together in KasmV2.
+archive_notice: true
 ---
 
 Terraform and Ansible are both powerful tools, each with their own strengths.
@@ -65,7 +69,6 @@ For more detailed information about each tool, you can refer to their official d
 - **Ansible**: [Ansible Documentation](https://docs.ansible.com/ansible/latest/index.html)
 
 
-# Conclusion
 Both Terraform and Ansible are powerful tools that can be used to manage infrastructure and configurations effectively. By understanding the strengths of each tool and how they complement each other, you can create a robust and efficient infrastructure setup.
 
 {% endraw %}

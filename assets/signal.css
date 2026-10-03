@@ -328,3 +328,29 @@ a.row:hover .row-t::before, a.row:focus-visible .row-t::before{width:1.1em; opac
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important; transition:none!important}
 }
+
+/* ---------- prose: archived writing and earlier project pages ---------- */
+.prose{max-width:40rem; min-width:0; font:400 1.03rem/1.7 var(--body); overflow-wrap:anywhere}
+.prose > :first-child{margin-top:0}
+.prose h2{font:700 1.6rem/1.15 var(--disp); letter-spacing:-.02em; margin:2.2em 0 .65em}
+.prose h3{font:700 1.25rem/1.2 var(--disp); letter-spacing:-.015em; margin:1.8em 0 .55em}
+.prose a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--sig); text-decoration-thickness:2px; text-underline-offset:.18em}
+.prose a:hover{color:var(--sig-ink)}
+.prose code{font:400 .88em/1.5 var(--mono); background:var(--hair2); padding:.12em .28em; overflow-wrap:anywhere}
+.prose pre{max-width:100%; overflow-x:auto; background:var(--ink); color:var(--on-ink); border:1px solid var(--ink); border-radius:0; padding:1rem; font:400 .85rem/1.55 var(--mono); tab-size:2}
+.prose pre code{background:transparent; color:inherit; padding:0; overflow-wrap:normal; white-space:pre}
+.prose table{display:block; width:100%; max-width:100%; overflow-x:auto; border-collapse:collapse; border-block:1px solid var(--hair); font-size:.94rem}
+.prose th,.prose td{padding:.55rem .75rem; border-bottom:1px solid var(--hair); text-align:left; vertical-align:top}
+.prose th{font:500 .76rem/1.45 var(--mono); color:var(--graph)}
+.prose blockquote{margin:1.5rem 0; padding:.8rem 1rem; border:1px solid var(--hair); border-left:3px solid var(--sig); color:var(--graph)}
+.prose img{display:block; max-width:100%; height:auto; border:1px solid var(--hair)}
+.prose iframe,.prose video{max-width:100%}
+.prose li{margin-block:.25em}
+.post-head{padding-bottom:1.2rem}
+.post-title{font-size:clamp(2.4rem,7vw,5rem)}
+.post-date{font:400 .8rem var(--mono); color:var(--graph); margin:.8rem 0 0}
+.post-prose{margin:1.5rem 0 clamp(4rem,9vw,7rem)}
+.archive-notice,.archive-banner{max-width:40rem; margin:1.25rem 0; padding:1rem; background:var(--paper); border:1px solid var(--hair); border-left:3px solid var(--sig); color:var(--graph); font-size:.93rem}
+.archive-notice a{color:var(--ink); text-decoration-color:var(--sig); text-decoration-thickness:2px}
+.project-media{margin-top:2rem}
+@media(max-width:540px){.prose{font-size:1rem}.prose pre{margin-inline:0;padding:.8rem}.prose th,.prose td{padding:.5rem}}

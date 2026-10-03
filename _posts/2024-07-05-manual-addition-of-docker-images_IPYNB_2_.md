@@ -7,6 +7,11 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  An earlier version of the guide to manually adding Docker images to Kasm Workspaces.
+archive_notice: true
+canonical_post: /2024/07/15/manual-registry-addition_IPYNB_2_.html
 ---
 
 <h2>Step 1: Navigation</h2>
@@ -47,7 +52,7 @@ CPU Allocation Method &gt; <em>From registry: JSON config</em>
 
 Docker Registry &gt; <em>From registry: JSON config</em>
 
-Docker Registry Username &gt; nighthawkcoders
+Use the verified registry owner shown by the project repository
 
 Web Filter Policy &gt; Inherit (autofilled)
 

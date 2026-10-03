@@ -7,6 +7,10 @@ tags:
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  A historical script for restarting a Kasm-related Docker container.
+archive_notice: true
 ---
 
 <ol>
@@ -19,7 +23,7 @@ project_tag: kasmv2
    #!/bin/bash</p>
 
 <p># Docker container ID to check
-   CONTAINER_ID="875ca0bef633"</p>
+   CONTAINER_ID="<container-id>"</p>
 
 <p># Check if the Docker container is running
    if ! docker ps | grep -q "$CONTAINER_ID"; then
