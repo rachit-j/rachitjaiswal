@@ -1,86 +1,36 @@
 ---
-layout: projectlayout
+layout: signal
 title: Projects
+nav: projects
+description: Research, robotics, and infrastructure projects by Rachit Jaiswal.
 ---
 
-<section class="text-center my-20 space-y-12">
-  <h1 class="text-5xl font-bold text-cyan-400">Projects</h1>
-  <p class="text-gray-300 max-w-xl mx-auto text-lg">
-    A collection of things I’ve built and rebuilt better.
-  </p>
-
-  <!-- Featured Projects (Large Cards) -->
-  <div class="flex flex-wrap justify-center gap-12 mt-12 px-6">
-  <style>
-    .equal-card {
-      width: 560px;
-      min-height: 100px;
-    }
-  </style>
-
-  <a href="/projects/kasmv2" class="equal-card group bg-black/60 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:-translate-y-1">
-    <img src="/assets/resume/img/kasmv2_logo.png" alt="KasmV2 Logo" class="w-12 h-12 mb-4 mx-auto object-contain" />
-    <h2 class="text-2xl font-bold text-cyan-300 group-hover:text-white">KasmV2</h2>
-    <p class="text-sm text-gray-400 mt-2">District-wide cloud VMs for equitable computing access in Poway USD.</p>
-  </a>
-
-  <a href="/projects/scorpio" class="equal-card group bg-black/60 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:-translate-y-1">
-    <img src="/assets/resume/img/ftc_logo.png" alt="FTC Logo" class="w-12 h-12 mb-4 mx-auto object-contain" />
-    <h2 class="text-2xl font-bold text-cyan-300 group-hover:text-white">Scorpio</h2>
-    <p class="text-sm text-gray-400 mt-2">FIRST Tech Challenge Robotics Team in San Diego, California.</p>
-  </a>
-</div>
-
-  <!-- More Projects (Medium Cards w/ Logo & Hover Tilt) -->
-  <div class="grid gap-8 mt-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-6">
-    <a href="/projects/trinamix" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/trinamix_logo.png" alt="Trinamix Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">Trinamix Material Detection</h3>
-      <p class="text-xs text-gray-400 mt-1">AI-powered material detection using Machine Learning and Fractal Calculations.</p>
-    </a>
-
-    <a href="/projects/horizon" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/horizon_logo.png" alt="Horizon Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">Horizon: Recycling Efficiency</h3>
-      <p class="text-xs text-gray-400 mt-1">ML method to capture and differentiate different types of plastic by visual inspection alone.</p>
-    </a>
-
-    <a href="https://developer.qualcomm.com/blog/high-school-project-computer-vision-and-robotics-enhance-waste-recycling" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/qualcomm_logo.png" alt="Qualcomm Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">Tech Space: Collaboration with Qualcomm</h3>
-      <p class="text-xs text-gray-400 mt-1">Pioneering the use of Qualcomm's QIDK for high school students.</p>
-    </a>
-
-    <a href="/projects/medilink" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/medilink_logo.png" alt="MediLink Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">MediLink: Big Data for San Diego Hackathon</h3>
-      <p class="text-xs text-gray-400 mt-1">Blockchain-based Universal EMR card to simplify and secure medical data.</p>
-    </a>
+<main id="main">
+  <div class="wrap page-head">
+    <h1 class="h-page ruled">Work</h1>
+    <p class="lede">Research, robotics, and infrastructure. Each case study shows the system as a flow you can step through.</p>
   </div>
-  
-  <div class="grid gap-8 mt-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-6">
-    <a href="/projects/rift" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/rift_logo.png" alt="PlasticSort Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">Rift</h3>
-      <p class="text-xs text-gray-400 mt-1">Introductory AWS Manager for students learning how to deploy and use EC2.</p>
-    </a>
-
-    <a href="/projects/artemis" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/artemis_logo_nobackground.png" alt="Artemis Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">Artemis</h3>
-      <p class="text-xs text-gray-400 mt-1">Gesture-controlled desktop assistant running on Raspberry Pi. Executes commands and connected to the GPT API.</p>
-    </a>
-
-    <a href="/projects/ucmerced" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/ucmerced_logo.png" alt="UCM Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">AI Safety Analysis at UC Merced</h3>
-      <p class="text-xs text-gray-400 mt-1">Worked with Professor Ayush Pandey in determining the safety of Falcon and Llama models in mission-critical situations.</p>
-    </a>
-
-    <a href="/projects/codemaxxers" class="group bg-black/50 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-cyan-400 transition transform hover:rotate-1 hover:scale-[1.02]">
-      <img src="/assets/resume/img/codemaxxers_logo.png" alt="Smart Arm Logo" class="w-10 h-10 mb-3 mx-auto object-contain" />
-      <h3 class="text-base font-semibold text-cyan-300 group-hover:text-white">Codemaxxers: The Game</h3>
-      <p class="text-xs text-gray-400 mt-1">Educational computer science game created using Spring and NodeJs.</p>
-    </a>
-  </div>
-</section>
+  <section class="band wrap" aria-labelledby="f-h" style="padding-top:1rem">
+    <h2 class="vh" id="f-h">Case studies</h2>
+    <ul class="rows">
+      <li><a class="row" href="/projects/math-ai"><span><span class="row-t">Mathematical Theorem Retrieval</span><span class="row-ctx">UW Math AI Lab, 2026</span></span><span class="row-s"><b>Public preprint</b>A fine-tuned embedder for theorem retrieval across natural language, LaTeX, and Lean.</span></a></li>
+      <li><a class="row" href="/projects/aruw-perception"><span><span class="row-t">ARUW — Real-Time Perception</span><span class="row-ctx">Advanced Robotics at UW, 2025–26</span></span><span class="row-s"><b>~30 ms → 6–7 ms</b>End-to-end latency for a Jetson detection and classification pipeline.</span></a></li>
+      <li><a class="row" href="/projects/kasmv2"><span><span class="row-t">KasmV2</span><span class="row-ctx">Poway Unified School District, 2024–25</span></span><span class="row-s"><b>Five high schools</b>Browser-based computing for students on low-powered Chromebooks.</span></a></li>
+    </ul>
+    <div class="bench-line"><b>Hive</b><span class="state live">In development</span><p>I’m developing Hive, a personal agent platform for coordinating AI agents and tools across local and cloud environments.</p></div>
+  </section>
+  <section class="band wrap" aria-labelledby="e-h" style="padding-top:0">
+    <div class="sec-head"><h2 class="h-sec" id="e-h">Earlier projects</h2><p>Selected work from before college.</p></div>
+    <ul class="rows">
+      <li><a class="row" href="/projects/rift"><span><span class="row-t">Rift</span><span class="row-ctx">Systems / Education</span></span><span class="row-s">An AWS EC2 management and teaching tool used by over 200 students to deploy websites and work with cloud infrastructure.</span></a></li>
+      <li><a class="row" href="/projects/scorpio"><span><span class="row-t">FTC Team 15171 Scorpio</span><span class="row-ctx">Robotics, 2019–2025</span></span><span class="row-s">Led programming and autonomous systems for a competitive FIRST Tech Challenge team.</span></a></li>
+      <li><a class="row" href="/projects/trinamix"><span><span class="row-t">TrinamiX — Material Identification</span><span class="row-ctx">Industry / Machine learning, August–November 2023</span></span><span class="row-s">Developed material-classification models and a custom imaging dataset pipeline based on laser speckle patterns.</span></a></li>
+      <li><a class="row" href="/projects/horizon"><span><span class="row-t">Plastic Classification Research</span><span class="row-ctx">Earlier research, 2023</span></span><span class="row-s">Investigated visual classification of plastic bottles and published the project in Horizon Academic Research Journal, Vol. 4 No. 2.</span></a></li>
+      <li><div class="row static"><span><span class="row-t">Tech Space × Qualcomm QIDK</span><span class="row-ctx">Earlier collaboration, 2023</span></span><span class="row-s">Worked on computer vision and robotics for waste recycling using Qualcomm’s Innovators Development Kit.</span></div></li>
+      <li><a class="row" href="/projects/medilink"><span><span class="row-t">MediLink</span><span class="row-ctx">Hackathon prototype, 2024</span></span><span class="row-s">A blockchain-inspired medical-record sharing concept prototyped for the Big Data for San Diego Hackathon.</span></a></li>
+      <li><a class="row" href="/projects/artemis"><span><span class="row-t">Artemis</span><span class="row-ctx">Personal project</span></span><span class="row-s">A Raspberry Pi assistant connecting hand-gesture recognition, a voice interface, and GPT-powered commands.</span></a></li>
+      <li><a class="row" href="/projects/ucmerced"><span><span class="row-t">LLM Safety Research — UC Merced</span><span class="row-ctx">Earlier research</span></span><span class="row-s">Studied language-model behavior in safety-critical use cases under the guidance of Ayush Pandey.</span></a></li>
+      <li><a class="row" href="/projects/codemaxxers"><span><span class="row-t">CodeMaxxers</span><span class="row-ctx">Team project</span></span><span class="row-s">Coordinated a 15-student team building an educational computer science game.</span></a></li>
+    </ul>
+  </section>
+</main>
