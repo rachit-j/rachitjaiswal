@@ -20,8 +20,8 @@
 
 title: Rachit Jaiswal
 email: rjaiswal.sd.77@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My name is Rachit Jaiswal, and I am a software engineer. This is my personal blog where I share my thoughts, experiences, and insights on software development, technology, and life in general.
+description: >-
+  Rachit Jaiswal is a Carnegie Mellon computer science student working on AI tools, robotics perception, systems, and mathematical search.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rachitjaiswal.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: 
