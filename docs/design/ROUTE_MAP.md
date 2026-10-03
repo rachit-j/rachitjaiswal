@@ -1,18 +1,18 @@
 # Route and implementation map
 
-Phase 1, 2026-10-03. Branch: `webv2` (opening user instruction overrides pasted `redesign/signal`).
+Integrated redesign, 2026-10-03. Branch: `webv2` (opening user instruction overrides pasted `redesign/signal`).
 
 ## Stack and commands
 
 - Jekyll 4.4.1 with Minima 2.5 and jekyll-feed; Liquid layouts/includes and Markdown posts.
 - Build: `bundle exec jekyll build`. Serve: `bundle exec jekyll serve --host 127.0.0.1` (http://127.0.0.1:4000).
 - No bundler is required. Existing CDN Tailwind/Alpine/p5/particles belong to legacy templates. Signal assets are plain `assets/signal.css` and `assets/signal.js`.
-- Pages currently emit `.html` files; extensionless existing links rely on hosting resolution. Phase 2 should set explicit pretty permalinks while preserving `.html` aliases if needed. Posts retain the default `/:categories/:year/:month/:day/:title:output_ext`.
+- Pages preserve their original `.html` emission; Jekyll serves the production extensionless links as well. New Notebook and case studies use the same convention. Posts retain the default `/:categories/:year/:month/:day/:title:output_ext`.
 - Signal shell: `_layouts/signal.html`, `_includes/signal/{head,header,footer,tracker}.html`. Page bodies own `<main>` so cover and notebook DOM remain exact.
 - Existing portrait: `assets/img/profile.png`, 2114×2411; confirmed from `_layouts/landing.html:190`. Reference crop is internal only.
 - Private inputs, docs, graph, node_modules and legacy data snapshots excluded in `_config.yml`.
 
-## Page ownership for Phase 2
+## Implemented pages and stream ownership
 
 | Reference | Route | Content source | Existing layout → target | Owner |
 |---|---|---|---|---|
@@ -33,7 +33,7 @@ Phase 1, 2026-10-03. Branch: `webv2` (opening user instruction overrides pasted 
 | — | `/projects/artemis` | `projects/artemis.html` | projectdetails → signal (no flow) | D |
 | — | `/projects/ucmerced` | `projects/ucmerced.html` | projectdetails → signal (no flow) | D |
 | — | `/projects/codemaxxers` | `projects/codemaxxers.html` | projectdetails → signal (no flow) | D |
-| — | /404.html | `404.html` | existing default/Minima; review later | lead |
+| — | /404.html | `404.html` | signal | lead |
 
 ## All dated posts
 
@@ -60,9 +60,13 @@ Phase 1, 2026-10-03. Branch: `webv2` (opening user instruction overrides pasted 
 ## Preservation and integration notes
 
 - `/experience/*` has no content source and must be removed from internal links rather than masked with unrelated pages (E).
-- Résumé removal is Phase 2 E; preserve unrelated project/research PDFs.
-- `about.html` has a pre-existing user edit. Phase 1 does not change or commit it.
-- Shared includes are namespaced during integration so existing pages retain their current shell until their owners migrate them.
+- Résumé controls removed; no résumé file exists. Unrelated project/research PDFs are preserved.
+- The old `about.html` edit is preserved in /private/tmp/rachit-about-before-signal.html and .patch. User explicitly authorized replacing the page and committing/pushing the rebuild.
+- All public pages now use the namespaced Signal includes through `_layouts/signal.html`; dated posts use the Signal parent layout.
 - Lead owns `_config.yml`, shared shell, docs and commits. D may append only approved `.prose` CSS and document its classes. E supplies metadata edits to lead.
-- Five Luna streams run in batches within the available three child slots after Phase 1; QA F runs after integration. No subagents ran in Phase 1.
+- Five Luna implementation streams ran in batches within the available child slots; Luna QA F followed integration. Phase 1 was lead-only.
 - Reference lives at `docs/design/reference/`; parked matrix at `docs/design/parked/`; both excluded. Content packet remains in /private/tmp, ZIP inputs excluded.
+
+## Final route behavior
+
+`/` and `/home` share the same cover/sheet include, with canonical `/`. `/about`, `/projects`, `/blogs`, `/notebook` and all project routes emit their `.html` counterparts; both representations work in the Jekyll preview. All 17 original dated post paths remain unchanged.

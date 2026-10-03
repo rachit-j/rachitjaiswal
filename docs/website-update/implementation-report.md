@@ -1,47 +1,74 @@
-# Implementation report
+# Signal website implementation report
 
-## Phase 1 checkpoint — October 3, 2026
+October 3, 2026. Branch: `webv2`.
 
-Branch: `webv2`, following the user's opening instruction rather than the pasted `redesign/signal` name. Refreshed origin and main before creating the branch. No push, merge, deployment, DNS or hosting change was performed by this agent.
+## Result and routes
 
-### Implementation
+The approved Signal reference is integrated into the existing Jekyll 4.4.1 site. No React, CSS framework or bundler was added. All page streams were implemented with Luna subagents, integrated and committed by the lead; a separate Luna QA stream followed integration.
 
-- Confirmed Jekyll 4.4.1, Minima 2.5 and jekyll-feed. Kept the generator and asset model.
-- Ported `assets/signal.css` and `assets/signal.js` byte-for-byte from the approved reference. Neither required path edits. No prose extension yet.
-- Added `_layouts/signal.html` and namespaced shared head, header, footer and tracker includes. Conditional `has-cover`, `on-cover`, active navigation and canonical-path support are ready for the page streams.
-- Kept the exact Google Fonts link, favicon data URI and tracker SVG. Shared links use production routes and Jekyll URL filters.
-- Added canonical and Open Graph metadata to the new head. No unsupported structured-data facts were introduced.
-- Stored the approved design, reference and parked matrix under `docs/design/`; mapped every reference page, existing project and all 17 dated posts in `ROUTE_MAP.md`.
-- Excluded docs, iteration inputs, graph outputs, packet directories, node_modules, vendor and old data snapshots from Jekyll output.
-- Referenced Claude's existing 401-node graph during recon; ran `graphify update .`, then merged source-verified shell includes/asset references and reclustered. Final local graph: 549 nodes, 751 edges, 28 communities. Original curated graph backups were created by Graphify. Graph outputs remain local and unserved; no LLM community relabeling was run.
+| Page | Status / source |
+|---|---|
+| `/` and `/home` | Reference cover, canvas, lockup and sheet; shared `_includes/signal/home-content.html`; canonical `/` |
+| `/projects` | Reference Work rows, modest Hive entry and linked earlier projects |
+| `/projects/math-ai` | Reference case study and exact flow JSON; public paper link |
+| `/projects/aruw-perception` | Reference case study and exact flow JSON; qualified latency and team outcome |
+| `/projects/kasmv2` | Reference case study and exact flow JSON; historical internship/rollout; real dated writing links |
+| `/notebook` | Reference groups, year index, spine and filters; 21 data-driven entries including five real dated writing links |
+| `/about` | Exact reference main DOM except production link; verified education/capabilities |
+| `/blogs` | Selected writing and archive rows using all 17 supplied excerpts/dispositions |
+| All 17 dated posts | Original URLs/dates preserved; Signal article/prose layout and historical notices; July 5 Docker guide links to July 15 guide |
+| Scorpio, TrinamiX, Horizon, MediLink, Rift, Artemis, UC Merced, CodeMaxxers | Existing routes preserved as Signal case studies without flow diagrams, using supplied copy |
+| `/404.html` | Signal shared shell and recovery link |
 
-### Routes and page status
+Pages preserve `.html` file emission, and Jekyll resolves the extensionless production links. No hosting configuration was changed. The root and Home alias share the same body. Full route/source mapping is in `docs/design/ROUTE_MAP.md`.
 
-All existing pages remain in their original form in this checkpoint. The reusable shell is ready but not yet connected to public pages. No new public routes, redirects, archived post presentation or case-study bodies were introduced. Phase 2 will migrate Home, Work, case studies, Notebook, blog/legacy pages and About. Phase 3 QA follows integration.
+## Shared implementation
 
-The shell was exercised with an ephemeral About-reference body built as `signal-shell-check.html`. The fixture was removed from the repository after its temporary build and is not committed or part of the production build.
+- `_layouts/signal.html` and `_includes/signal/{head,header,footer,tracker}.html` provide the exact shared reference DOM, fonts, SVG favicon, stylesheet, deferred script, navigation and footer.
+- `signal.js` is byte-for-byte unchanged. `signal.css` preserves the reference byte prefix and appends only the permitted prose section, including article/archive classes documented in DESIGN §7.14.
+- Original full-resolution `assets/img/profile.png` retained. Preview crop remains only in the excluded internal reference.
+- Metadata reflects CMU-era positioning, with supplied per-article excerpts, canonical URLs and Open Graph tags. No phone, résumé download, fabricated affiliation or unsupported structured-data claim was added.
+- Old About résumé control and copied experience links are removed. There is no résumé PDF in source. Obsolete logo images remain in source but `assets/resume` is excluded from builds. All three unrelated project/research PDFs remain served.
+- `docs`, `iteration`, handoff/reference directories, graph outputs, node_modules, vendor and legacy data snapshots are excluded. Fresh build verifies no packet ZIPs, docs or internal data are emitted.
+- The existing local graph was referenced during recon and updated with current source-derived Signal page/layout relationships. Old semantic descriptions for replaced pages were removed; unchanged graph material retained. Final local graph has 486 nodes / 507 edges / 34 communities before the last small content refinements. Graphify created backups. Graph outputs remain local and excluded from the site.
 
-### Verification evidence
+## Deviations from the static reference
+
+- Required original portrait replaces the preview crop.
+- Flat reference links are production routes; earlier project rows are actual links as required by DESIGN §5.
+- Removed the reference-only footer label “Design preview, not the live site,” retaining its span and surrounding DOM.
+- Notebook explicitly describes UW as previous attendance. Home short bio remains the approved compact public copy; the reference-directed Notebook CTA is retained.
+- No extra Kasm resource buttons were added to the reference facts aside; the unverified repository remains omitted. Two overview URLs were checked but omitted to preserve the approved component shape.
+- Blog/legacy content has no static reference counterpart; follows DESIGN §7.14 and the existing case-study grammar. New prose rules constrain the article flex item, wrap long technical titles and make scrollable code keyboard-focusable.
+- Three expired retained outbound links and one inaccessible unverified discussion link were omitted after QA; no replacement destination was invented.
+- The attractor starts at a random point in its approved cycle, so paired homepage screenshots show different frames. CSS, equations and renderer are unchanged.
+
+No other intentional design change was made. Screenshot comparisons and QA details are in `qa-report.md` and `qa-artifacts/`.
+
+## Validation
 
 - `bundle check`: dependencies satisfied.
-- Baseline and modified `bundle exec jekyll build --destination ...`: exit 0. Existing Minima Sass deprecation warnings and a wdm-extension warning remain.
-- `cmp` confirms both public Signal asset files match the reference exactly.
-- `git diff --check`: clean for this work.
-- Temporary built output contains no docs, iteration, packet, graph, node_modules or legacy data directories, and no ZIP files.
-- Opened reference homepage before implementation in isolated Playwright WebKit. Built-in internal browser unavailable; isolated Firefox failed to launch. No personal browser or authenticated session was used.
-- Reference About and temporary shell screenshots inspected at 1440×900 and 390×844; overflow checked additionally at 360×844. One h1 each, correct active About navigation, no horizontal overflow, no page JavaScript errors. Tracker initializes. About content remains readable with JavaScript disabled.
-- Original portrait successfully decoded in WebKit. Its rendered orientation reflects the existing image metadata.
+- Repeated builds after each integration slice with `bundle exec jekyll build --destination /private/tmp/rachit-signal-check`: exit 0. Existing Minima Sass deprecation warnings and wdm-extension warning remain.
+- `git diff --check`: clean. Three flow JSON bodies equal the reference byte-for-byte; original CSS prefix and unchanged JS verified.
+- Paired screenshots: all seven reference pages at 1440×900 and 390×844 (28 screenshots). Original portrait and allowed content/link corrections are the intentional differences.
+- All 35 emitted HTML routes fit at 360px, have one h1 and a skip link; content remains present with JavaScript disabled.
+- Cover values update; Pause/Play label changes; sheet/header/tracker behavior works; RAF scheduling goes idle once the cover is covered.
+- All three flows initialize, sweep/replay and support arrows, Home and End.
+- Notebook filters return 21/3/4/3/2/5/4 entries for All/Industry/Research/Systems/Education/Writing/Leadership; empty groups hide, writing query works, year index and spine update.
+- Reduced motion hides the cover pause control, draws a still frame and produces no running animations in the tested page.
+- Axe WCAG A/AA checks initially found six scrollable code regions lacking keyboard focus; lead fixed the article layout and the six-route retest passes. Full final QA results are in the QA report.
+- Internal-link HTTP scan: zero 4xx. Expanded audit checked 38 retained outbound URLs and 60 distinct packet URLs. Three retained 404s were removed. LinkedIn anti-bot status remains inconclusive; packet-only failed old résumé/experience destinations are not retained.
+- Fresh build has no résumé directory/file/control, packet files, ZIPs, docs, graph, source IDs or verification notes. Three unrelated PDFs preserved.
+- Cover rough observed frame rate: about 72 FPS in isolated headless WebKit over a short sample. WebKit does not support the Long Tasks observer here; no long-task absence claim is made. Real-device/browser performance may differ.
 
-### Deviations and limitations
+Old technical blog recipes were not modernized against current product documentation; they carry historical context notices. Automated checks are not a full accessibility certification or an external employer-fact audit.
 
-The only intentional shared visual-copy deviation is removal of the reference-only footer label “Design preview, not the live site”; the reference span and surrounding DOM remain. Original full-resolution portrait replaces the preview crop as requested. Added metadata does not affect visual layout.
+## Local preview and execution boundary
 
-Full page parity, cover/flow/notebook behavior, reduced motion, axe/Lighthouse, complete link checks and performance checks await the integrated pages. Résumé removal is not complete: the old About download control remains in legacy content at this checkpoint. Existing unrelated research/project PDFs have not been removed.
+Current preview: http://127.0.0.1:4001.
 
-Pre-existing `about.html` edits and untracked assets/dist, node_modules, graph and iteration inputs were preserved. They are not included in the Phase 1 commits. Graph was updated locally at the user's request.
+To run: `bundle exec jekyll serve --host 127.0.0.1 --port 4001` (use another port if occupied). Build: `bundle exec jekyll build`.
 
-### Local review
+The user explicitly authorized committing the rebuilt About page and pushing `webv2` after an approval-review block about the pre-existing edit. The old edit is preserved in `/private/tmp/rachit-about-before-signal.html` and `.patch`. No merge, deployment, DNS or hosting change is authorized or performed. Push status is reported in the final response after execution.
 
-Run `bundle exec jekyll serve --host 127.0.0.1` and open http://127.0.0.1:4000. This checkpoint still shows legacy pages; the redesign page streams are the next phase. The approved internal reference is in `docs/design/reference/`, excluded from Jekyll.
-
-No content decision is required to finish Phase 1. The packet's conservative fallbacks permit Phase 2 to proceed without inventing optional facts.
+Optional facts/projects held and safe fallbacks are detailed in `content-verification.md`; none blocks the verified update. Existing unrelated untracked assets/dist, iteration, node_modules and local graph files are preserved outside these implementation commits.
