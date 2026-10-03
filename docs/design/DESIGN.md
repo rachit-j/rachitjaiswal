@@ -133,7 +133,7 @@ In production, the "Earlier projects" rows on `/projects` link to their existing
 | Contact icons | Inline SVG, copied from the reference | Drawn envelope, GitHub mark, LinkedIn "in" |
 | Favicon | Undamped 2 : 3 harmonograph as an inline SVG data URI | Copy the `<link rel="icon">` from the reference `<head>` |
 | Tagline | Handoff landing copy | "AI · Robotics · Systems · Human-computer interaction" |
-| Contact details | Handoff `public-content.json` | Email `rjaiswal.sd.77@gmail.com` ("Email"), GitHub `rachit-j`, LinkedIn |
+| Contact details | Handoff `public-content.json` | Email `jaiswal.rachit07@gmail.com` ("Email"), GitHub `rachit-j`, LinkedIn |
 
 ## 7. Components
 
@@ -306,3 +306,5 @@ Contact text and the email icon accessible name are now “Email.” Remove the 
 CMR adds a responsive interactive SVG graph experiment in the case-study flow band, using the existing paper grid, ink, violet, mono labels, square controls, and ruled borders. Controls select Returns, Graph, or Lanes and adjust the connection radius. A deterministic illustrative point cloud and distance-based graph demonstrate connectivity; the diagram explicitly identifies itself as illustrative rather than recorded LiDAR or a performance result. No autoplay or motion is needed. The full SVG and explanation remain visible without JavaScript; controls appear only after initialization. Keyboard users can operate every button and slider. Classes `.lidar-demo`, `.lidar-controls`, `.lidar-viz`, `.lidar-points`, `.lidar-edges`, `.lidar-lanes`, `.lidar-status` live in a separate page-only stylesheet; original Signal CSS/JS stay unchanged.
 
 Rachit confirms acceptance at the NeurIPS 2026 Math AI Workshop; state acceptance, not presentation. Keep the existing ICML 2026 presentation fact.
+
+2026-10-03 — Rachit updates the primary public contact email to `jaiswal.rachit07@gmail.com`, superseding the handoff address.
