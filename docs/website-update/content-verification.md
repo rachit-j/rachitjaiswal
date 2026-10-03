@@ -70,3 +70,5 @@ External-link results and remaining QA limitations are recorded separately in `q
 ## 2026-10-03 user-confirmed updates
 
 Rachit directly confirms ongoing CMR work on LiDAR lane detection using graph theory, and acceptance of the Math AI work at the NeurIPS 2026 Math AI Workshop. These later instructions supplement the original handoff. CMR dates, expanded name, affiliations, metrics, and repository links remain omitted. The diagram is synthetic and illustrative. Leadership entries remain under All; only the filter tab is removed.
+
+2026-10-03: Rachit directly supplied `jaiswal.rachit07@gmail.com` as the new main email, replacing the packet address in public contact links and site configuration.

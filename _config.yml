@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Rachit Jaiswal
-email: rjaiswal.sd.77@gmail.com
+email: jaiswal.rachit07@gmail.com
 description: >-
   Rachit Jaiswal is a Carnegie Mellon computer science student working on AI tools, robotics perception, systems, and mathematical search.
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -1,0 +1,8 @@
+/* User-requested cover identity transition; reference assets remain unchanged. */
+.cover-inner {
+  transform:translateY(calc(-1 * var(--identity-shift, 0px)));
+  opacity:var(--identity-opacity, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover-inner {transform:none;opacity:1}
+}
