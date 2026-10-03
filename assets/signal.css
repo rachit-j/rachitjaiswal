@@ -330,7 +330,7 @@ a.row:hover .row-t::before, a.row:focus-visible .row-t::before{width:1.1em; opac
 }
 
 /* ---------- prose: archived writing and earlier project pages ---------- */
-.prose{max-width:40rem; min-width:0; font:400 1.03rem/1.7 var(--body); overflow-wrap:anywhere}
+.prose{max-width:40rem; min-width:0; font:400 1.03rem/1.7 var(--sans); overflow-wrap:anywhere}
 .prose > :first-child{margin-top:0}
 .prose h2{font:700 1.6rem/1.15 var(--disp); letter-spacing:-.02em; margin:2.2em 0 .65em}
 .prose h3{font:700 1.25rem/1.2 var(--disp); letter-spacing:-.015em; margin:1.8em 0 .55em}
@@ -346,8 +346,9 @@ a.row:hover .row-t::before, a.row:focus-visible .row-t::before{width:1.1em; opac
 .prose img{display:block; max-width:100%; height:auto; border:1px solid var(--hair)}
 .prose iframe,.prose video{max-width:100%}
 .prose li{margin-block:.25em}
+.post-page{width:100%; min-width:0}
 .post-head{padding-bottom:1.2rem}
-.post-title{font-size:clamp(2.4rem,7vw,5rem)}
+.post-title{font-size:clamp(2.4rem,7vw,5rem); overflow-wrap:anywhere}
 .post-date{font:400 .8rem var(--mono); color:var(--graph); margin:.8rem 0 0}
 .post-prose{margin:1.5rem 0 clamp(4rem,9vw,7rem)}
 .archive-notice,.archive-banner{max-width:40rem; margin:1.25rem 0; padding:1rem; background:var(--paper); border:1px solid var(--hair); border-left:3px solid var(--sig); color:var(--graph); font-size:.93rem}
