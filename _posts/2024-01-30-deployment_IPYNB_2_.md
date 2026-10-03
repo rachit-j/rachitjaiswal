@@ -1,6 +1,6 @@
 ---
 title: How to Deploy on AWS
-description: Lesson on AWS Deployment by RIFT. Made by Rachit
+description: "A classroom guide to deploying student applications with EC2, Docker, Nginx, and Route 53."
 toc: True
 layout: post
 tags:
@@ -8,9 +8,13 @@ tags:
   - AWS
   - Teaching
 project_tag: rift
+
+excerpt: >-
+  A classroom guide to deploying student applications with EC2, Docker, Nginx, and Route 53.
+archive_notice: true
+nav: notebook
 ---
 
-# Deployment
 
 **NOTE: Look at this [Cockpit blog](https://rift24.github.io/RIFT-Frontend/2024/01/30/Cockpit-Usage.html) for another way to access AWS Instances without being blocked by the school network.**
 
@@ -29,7 +33,7 @@ We deploy our instances through Amazon Elastic Compute Cloud (EC2), a service wh
 - Deployment time reduced to mere minutes
 - Pay for what you use
 
-To access AWS EC2 Instances, you have to log into Amazon AWS with the credentials Mr. Mortensen provided you at the start of the year (if you don't have these, what are you doing?), which were your Github username and password. 
+This archived classroom walkthrough refers to a school-provided AWS account. Account identifiers and credential instructions have been removed.
 
 To depoly, you first sign in through this page: [AWS Console](https://aws.amazon.com/console/)
 
@@ -38,7 +42,7 @@ To depoly, you first sign in through this page: [AWS Console](https://aws.amazon
 You will then be redirected to a page like this
 ![Deployment_AWS_Page_2](https://rackets-assets.vercel.app/assets/deployment_lesson/Deployment_AWS_Page_2.png)
 
-Our AWS organization is called NighthawkCodingSociety, so in the Account ID tab of the sign in page, you will put "nighthawkcodingsociety". Then, you put in your Github username/password into their respective fields and log in.
+The original account-specific sign-in instructions have been removed.
 
 You will then be greeted by a screen similar to this
 ![Deployment_AWS_Page_3](https://rackets-assets.vercel.app/assets/deployment_lesson/Deployment_AWS_Page_3.png)

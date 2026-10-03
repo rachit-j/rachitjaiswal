@@ -1,12 +1,17 @@
 ---
 layout: post
 title: Autoscale Configuration Guide
-description: How to configure Kasm to automatically scale agents
+description: "A historical guide to configuring and testing Kasm Docker-agent autoscaling."
 tags:
   - KasmV2
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  A historical guide to configuring and testing Kasm Docker-agent autoscaling.
+archive_notice: true
+nav: notebook
 ---
 
 ## Step 1: Licensing the Kasm Workspaces Installation
@@ -96,8 +101,6 @@ Use the "Add" button for new configuration.  Or select pencil icon to edit exist
 | SSH Keys                              | SSH keys you want to use to access the VM                                                       | Use the deployer keys stated for the machine, but can use any |
 
 #### Adapted EC2 Startup Script
-
-Obtain the [Kasm EC2 Startup Script](https://github.com/kasmtech/workspaces-autoscale-startup-scripts/blob/develop/1.15.0/docker_agents/ubuntu.sh)
 
 The AWS Internal IP did not work in script as obtained from Kasm Web Site did not work.  It was switched to obtain the `IP` using the more conventional `hostname -I`.  This is simply done by commenting out the `AWS Internal IP` line and using `OCI Internal IP`.
 

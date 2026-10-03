@@ -1,7 +1,10 @@
 ---
-layout: landing
+layout: signal
 title: Rachit Jaiswal
+description: Rachit Jaiswal is a Carnegie Mellon computer science student working on AI tools, robotics perception, systems, and mathematical search.
+has_cover: true
+canonical_path: /
+permalink: /
 ---
 
-<h1 style="font-family: 'Oxanium', sans-serif;">Rachit Jaiswal</h1>
-<p>AI • Robotics • Systems Engineering</p>
+{% include signal/home-content.html %}

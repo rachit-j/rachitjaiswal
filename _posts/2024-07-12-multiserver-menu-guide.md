@@ -1,12 +1,17 @@
 ---
 layout: post
 title: Kasm Multi-Server Installer Guide
-description: This section below is the installation and menu guide for the Kasm multiserver installer.
+description: "A user-facing setup guide for the KasmV2 multi-server installer."
 tags:
   - KasmV2
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  A user-facing setup guide for the KasmV2 multi-server installer.
+archive_notice: true
+nav: notebook
 ---
 
 ## Initialization Guide
@@ -90,10 +95,10 @@ The system will then create the requested amount of images, with the web image h
 
 | Variable             | Question                                               | Expected Responses                                                                                                                                                                              |
 |----------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kasm User Password   | Enter user password [default: password]                | Asks the user for the local kasm user's (<user@kasm.local>) password, and has a default (press ENTER) password of "password".                                                                     |
-| Admin Password       | Enter admin password [default: adminpassword]          | Asks the user for the admin user's password, and has a default (press ENTER) password of "adminpassword".                                                                                       |
-| DB Password          | Enter database password [default: dbpassword]          | Asks the user for the database user's password, and has a default (press ENTER) password of "dbpassword".                                                                                       |
-| Redis Password       | Enter Redis password [default: redispassword]          | Asks the user for the Redis user's password, and has a default (press ENTER) password of "redispassword".                                                                                       |
+| Kasm User Password   | Enter user password [default: <set-a-secure-password>]                | Asks the user for the local kasm user's (<<your-kasm-user>>) password, and has a default (press ENTER) password supplied by the operator.                                                                     |
+| Admin Password       | Enter admin password [default: <set-a-secure-password>]          | Asks the user for the admin user's password, and has a default (press ENTER) password of <set-a-secure-password>.                                                                                       |
+| DB Password          | Enter database password [default: <set-a-secure-password>]          | Asks the user for the database user's password, and has a default (press ENTER) password of <set-a-secure-password>.                                                                                       |
+| Redis Password       | Enter Redis password [default: <set-a-secure-password>]          | Asks the user for the Redis user's password, and has a default (press ENTER) password of <set-a-secure-password>.                                                                                       |
 | Manager Token        | Enter manager token [default: managertoken]            | Asks the user for the manager token, and has a default (press ENTER) token of "managertoken".                                                                                                   |
 | Registration Token   | Enter registration token [default: registrationtoken]  | Asks the user for the registration token, and has a default (press ENTER) token of "registrationtoken".                                                                                         |
 

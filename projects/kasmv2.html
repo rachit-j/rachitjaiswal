@@ -1,33 +1,32 @@
 ---
-layout: projectdetails
+layout: signal
 title: KasmV2
-project_name: KasmV2
-description: District-wide cloud VMs for equitable computing access in Poway USD.
-logo: /assets/resume/img/kasmv2_logo.png
-project_tag: kasmv2
-links:
-  - name: GitHub
-    url: https://github.com/nighthawkcodingsociety/kasm-multi-server
-  - name: Website
-    url: https://nighthawkcoders.github.io/portfolio_2025/kasm/pages/intro
-  - name: PUSD Version
-    url: https://open-coding-society.github.io/kasm-platform/
-
+nav: projects
+description: Built a multi-server AWS platform delivering desktops and applications through a browser across five high schools.
 ---
-<!-- papers:
-  - title: Whitepaper (2024)
-    url: /assets/papers/kasmv2_whitepaper.pdf -->
 
-<!-- Custom HTML or markdown below -->
-
-<p>KasmV2 is a district-wide cloud computing system that enables students to access full-featured virtual machines from low-powered Chromebooks. </p>
-<br>
-<p>It is designed for scalability and equity, made to ensure all students in Poway USD have access to high-performance environments for computing and coursework. </p>
-<br>
-<p>The installer and core setup tools are publicly available on the GitHub repository: nighthawkcoders/kasm-multi-server. </p>
-<br>
-<p>Documentation, migration instructions, and updates to the DockerHub-based deployment are maintained on the PUSD-hosted version: open-coding-society/kasm-platform</p>
-<br>
-<p>KasmV2 uses the Kasm Platforms system, running on AWS and generated with the use of Ansible, Terraform, SSH, and Shell.</p>
-<br>
-<p>It is currently deployed and in use at the Poway Unified School District in San Diego, California. The project started deployment in 2024.</p>
+<main id="main">
+  <article aria-labelledby="cs-h">
+    <div class="wrap cs-head">
+      <a class="crumb" href="/projects">All work</a>
+      <h1 class="h-page ruled" id="cs-h">KasmV2</h1>
+      <div class="cs-meta"><span class="state ">Historical multi-school deployment</span><span class="ctx">Poway Unified School District, May 2024–July 2025, Systems Engineer Intern</span></div>
+      <p class="cs-summary">Built a multi-server AWS platform delivering desktops and applications through a browser across five high schools.</p>
+    </div>
+    <div class="flow grid-paper" data-flow="flow-kasmv2">
+      <div class="wrap">
+        <div class="flow-cap"><span>From a student’s browser to the cloud. Select a stage.</span><button class="replay" type="button">Replay</button></div>
+        <ol class="stages" role="tablist" aria-label="KasmV2 stages"></ol>
+        <div class="note" role="tabpanel" tabindex="0"></div>
+      </div>
+    </div>
+    <script type="application/json" id="flow-kasmv2">[{"k": "access", "v": "Student browser", "t": "Students open desktops and applications in a browser, so a low-powered Chromebook is enough.", "tools": "Browser-based desktops"}, {"k": "route", "v": "Nginx and load balancing", "t": "Nginx handled traffic routing, with load balancing across the multi-server deployment.", "tools": "Nginx, load balancing"}, {"k": "run", "v": "Docker environments", "t": "Docker provided the containerized computing environments.", "tools": "Docker"}, {"k": "provision", "v": "AWS, automated", "t": "AWS Auto Scaling, with Ansible and Terraform provisioning, supported deployment and operation across multiple schools.", "tools": "AWS, Ansible, Terraform"}, {"k": "reach", "v": "Five high schools", "t": "Began as a Del Norte High School pilot and expanded to five high schools in Poway Unified School District.", "tools": "Supported by North Island Credit Union and the PUSD Foundation"}]</script>
+    <div class="wrap cs-body">
+      <div class="cs-text"><section><h2 class="h-sub">The problem</h2><p>Students using low-powered Chromebooks need access to computing environments that can support programming and other coursework without requiring a powerful local machine.</p></section><section><h2 class="h-sub">My contribution</h2><p>I initiated KasmV2 and engineered its cloud infrastructure. Docker and Nginx provided containerized environments and traffic routing. AWS Auto Scaling, load balancing, and Ansible/Terraform provisioning supported deployment and operation across multiple schools.</p></section><section><h2 class="h-sub">Deployment and support</h2><p>The project began as a Del Norte High School pilot and expanded to five high schools in Poway Unified School District. It received support from North Island Credit Union and the PUSD Foundation.</p></section></div>
+      <aside class="facts" aria-label="Project facts"><div class="proof"><b>Five high schools</b><span>expanded from a single-school pilot</span></div><dl><dt>Role</dt><dd>Systems Engineer Intern</dd><dt>Organization</dt><dd>Poway Unified School District</dd><dt>Dates</dt><dd>May 2024–July 2025</dd><dt>Tools</dt><dd>Docker, Nginx, AWS Auto Scaling, Ansible, Terraform</dd></dl><a class="ul-link" href="/notebook?filter=writing">Notes from this project</a></aside>
+    </div>
+    <nav class="wrap next" aria-label="Next project">
+      <a class="row" href="/projects/math-ai"><span class="k">Next project</span><span class="row-t">Mathematical Theorem Retrieval</span></a>
+    </nav>
+  </article>
+</main>

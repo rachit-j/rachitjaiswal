@@ -1,0 +1,155 @@
+[
+  {
+    "path": "/2024/01/30/Cors-and-Dotenv.html",
+    "title": "Some CORS and DotENV Notes",
+    "date": "2024/01/30",
+    "kind": "Technical note",
+    "excerpt": "Notes from a 2024 classroom deployment project on CORS configuration and environment variables.",
+    "action": "Archive pending technical review",
+    "featured": false
+  },
+  {
+    "path": "/2024/01/30/deployment_IPYNB_2_.html",
+    "title": "How to Deploy on AWS",
+    "date": "2024/01/30",
+    "kind": "Classroom archive",
+    "excerpt": "A classroom guide to deploying student applications with EC2, Docker, Nginx, and Route 53.",
+    "action": "Archive as classroom guide",
+    "featured": false
+  },
+  {
+    "path": "/2024/01/31/CSA-change-port.html",
+    "title": "The Three Locations for Changing Your Spring Port",
+    "date": "2024/01/31",
+    "kind": "Technical note",
+    "excerpt": "Where application ports, container metadata, and published Docker ports appear in a Spring deployment.",
+    "action": "Keep as versioned technical note",
+    "featured": true
+  },
+  {
+    "path": "/2024/02/07/server_names_hash_bucket_size-error.html",
+    "title": "Nginx Error - could not build the server_names_hash",
+    "date": "2024/02/07",
+    "kind": "Technical note",
+    "excerpt": "Troubleshooting an Nginx server_names_hash configuration error.",
+    "action": "Keep as historical troubleshooting note",
+    "featured": true
+  },
+  {
+    "path": "/2024/02/12/CSA-Deployment-Quiz.html",
+    "title": "Deployment Quiz README - CSA",
+    "date": "2024/02/12",
+    "kind": "Classroom archive",
+    "excerpt": "A deployment exercise originally written for a high-school computer science class.",
+    "action": "Archive classroom material",
+    "featured": false
+  },
+  {
+    "path": "/2024/03/20/CSP-change-port.html",
+    "title": "The Three Locations for Changing Your Flask Port",
+    "date": "2024/03/20",
+    "kind": "Technical note",
+    "excerpt": "A short reference for configuring application and Docker ports in a Flask deployment.",
+    "action": "Keep as versioned technical note",
+    "featured": true
+  },
+  {
+    "path": "/2024/07/05/docker-cronjob-for-containers_IPYNB_2_-2.html",
+    "title": "Cronjob for Container Restart",
+    "date": "2024/07/05",
+    "kind": "Technical note",
+    "excerpt": "A historical script for restarting a Kasm-related Docker container.",
+    "action": "Archive pending technical review",
+    "featured": false
+  },
+  {
+    "path": "/2024/07/05/manual-addition-of-docker-images_IPYNB_2_.html",
+    "title": "Manual Addition of Docker Images to Kasm",
+    "date": "2024/07/05",
+    "kind": "Project guide",
+    "excerpt": "An earlier version of the guide to manually adding Docker images to Kasm Workspaces.",
+    "action": "Consolidate with July 15 updated guide",
+    "featured": false
+  },
+  {
+    "path": "/2024/07/12/multiserver-developers-guide.html",
+    "title": "Kasm Multi-Server Installer Developers Guide",
+    "date": "2024/07/12",
+    "kind": "Project guide",
+    "excerpt": "Developer documentation for the KasmV2 multi-server installer, including setup and implementation notes.",
+    "action": "Keep in legacy project documentation",
+    "featured": false
+  },
+  {
+    "path": "/2024/07/12/multiserver-menu-guide.html",
+    "title": "Kasm Multi-Server Installer Guide",
+    "date": "2024/07/12",
+    "kind": "Project guide",
+    "excerpt": "A user-facing setup guide for the KasmV2 multi-server installer.",
+    "action": "Keep in legacy project documentation",
+    "featured": false
+  },
+  {
+    "path": "/2024/07/12/security-group-configuration_IPYNB_2_.html",
+    "title": "Kasm Security Group Configuration",
+    "date": "2024/07/12",
+    "kind": "Project guide",
+    "excerpt": "A historical note on the network ports used by a Kasm deployment.",
+    "action": "Keep only with explanatory context",
+    "featured": false
+  },
+  {
+    "path": "/2024/07/12/terraform-vs-ansible.html",
+    "title": "Terraform Vs Ansible",
+    "date": "2024/07/12",
+    "kind": "Technical note",
+    "excerpt": "How infrastructure provisioning and configuration management fit together in KasmV2.",
+    "action": "Keep selected technical writing",
+    "featured": true
+  },
+  {
+    "path": "/2024/07/15/manual-registry-addition_IPYNB_2_.html",
+    "title": "Manual Addition of Docker Images to Kasm (UPDATED)",
+    "date": "2024/07/15",
+    "kind": "Project guide",
+    "excerpt": "A guide to manually adding a Docker image as a Kasm workspace when a registry entry is unavailable.",
+    "action": "Keep as canonical versioned guide",
+    "featured": true
+  },
+  {
+    "path": "/2024/07/15/persistent-data_IPYNB_2_.html",
+    "title": "Kasm Persistent Data Configuration Guide",
+    "date": "2024/07/15",
+    "kind": "Project guide",
+    "excerpt": "Configuring persistent profiles for a Kasm workspace.",
+    "action": "Keep as versioned project guide",
+    "featured": true
+  },
+  {
+    "path": "/2024/07/30/autoscale-config_IPYNB_2_-2.html",
+    "title": "Autoscale Configuration Guide",
+    "date": "2024/07/30",
+    "kind": "Technical note",
+    "excerpt": "A historical guide to configuring and testing Kasm Docker-agent autoscaling.",
+    "action": "Keep in legacy project documentation",
+    "featured": false
+  },
+  {
+    "path": "/2024/07/31/plans-for-big-meet_IPYNB_2_.html",
+    "title": "Agenda for Presentation Aug 1",
+    "date": "2024/07/31",
+    "kind": "Classroom archive",
+    "excerpt": "An agenda for the KasmV2 presentation on August 1, 2024.",
+    "action": "Archive internal presentation agenda",
+    "featured": false
+  },
+  {
+    "path": "/2024/08/07/persistent-storage_IPYNB_2_-2.html",
+    "title": "S3 Persistent Storage",
+    "date": "2024/08/07",
+    "kind": "Technical note",
+    "excerpt": "A historical guide to configuring S3-backed persistent storage for Kasm profiles.",
+    "action": "Keep as versioned project guide",
+    "featured": true
+  }
+]

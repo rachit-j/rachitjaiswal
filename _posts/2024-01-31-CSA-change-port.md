@@ -1,6 +1,6 @@
 ---
 title: The Three Locations for Changing Your Spring Port
-description: Please read this before asking me
+description: "Where application ports, container metadata, and published Docker ports appear in a Spring deployment."
 toc: true
 layout: post
 tags:
@@ -8,9 +8,13 @@ tags:
   - AWS
   - Teaching
 project_tag: rift
+
+excerpt: >-
+  Where application ports, container metadata, and published Docker ports appear in a Spring deployment.
+archive_notice: true
+nav: notebook
 ---
 
-# Places to Change Spring Boot Port
 
 
 There are three places to change your port for a spring boot project.
@@ -56,9 +60,8 @@ spring.jpa.properties.hibernate.format_sql=false
 spring.jpa.open-in-view=false
 spring.datasource.url = jdbc:sqlite:volumes/sqlite.db
 spring.datasource.driver-class-name = org.sqlite.JDBC
-spring.datasource.username = admin
-spring.datasource.password = admin
-
+spring.datasource.username = <your-database-user>
+spring.datasource.password = <set-a-secure-password>
 server.port=8032 <-- right here
 
 

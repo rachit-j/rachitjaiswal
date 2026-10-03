@@ -1,6 +1,6 @@
 ---
 title: Nginx Error - could not build the server_names_hash
-description: How to solve the server_names_hash error
+description: "Troubleshooting an Nginx server_names_hash configuration error."
 toc: true
 layout: post
 tags:
@@ -8,14 +8,17 @@ tags:
   - AWS
   - Teaching
 project_tag: rift
+
+excerpt: >-
+  Troubleshooting an Nginx server_names_hash configuration error.
+archive_notice: true
+nav: notebook
 ---
 
 
-# What is the Error?
 
 The  `server_names_hash` error occurs when your domain name is too long for the current nginx configuration to process. This will crash your nginx server and make the service stop, which means your deployment will not be up. This can be changed in the nginx configuration.
 
-# How to fix the Error
 The `server_names_hash` error can be fixed by following the steps below:
 
 1. (With sudo) edit `/etc/nginx/nginx.conf` and add or modify this line: 
@@ -88,24 +91,24 @@ http {
 
 
 #mail {
-#       # See sample authentication script at:
-#       # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+## # See sample authentication script at:
+## # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
 #
-#       # auth_http localhost/auth.php;
-#       # pop3_capabilities "TOP" "USER";
-#       # imap_capabilities "IMAP4rev1" "UIDPLUS";
+## # auth_http localhost/auth.php;
+## # pop3_capabilities "TOP" "USER";
+## # imap_capabilities "IMAP4rev1" "UIDPLUS";
 #
-#       server {
-#               listen     localhost:110;
-#               protocol   pop3;
-#               proxy      on;
-#       }
+## server {
+## listen     localhost:110;
+## protocol   pop3;
+## proxy      on;
+## }
 #
-#       server {
-#               listen     localhost:143;
-#               protocol   imap;
-#               proxy      on;
-#       }
+## server {
+## listen     localhost:143;
+## protocol   imap;
+## proxy      on;
+## }
 #}
 ```
 
@@ -114,7 +117,7 @@ http {
 
 After you change the nginx configuration file, make sure to run `service nginx restart`.
 
-# Example of completion (riftdev)
+## Example of completion (riftdev)
 ```
 user www-data;
 worker_processes auto;
@@ -180,23 +183,23 @@ http {
 
 
 #mail {
-#       # See sample authentication script at:
-#       # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+## # See sample authentication script at:
+## # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
 #
-#       # auth_http localhost/auth.php;
-#       # pop3_capabilities "TOP" "USER";
-#       # imap_capabilities "IMAP4rev1" "UIDPLUS";
+## # auth_http localhost/auth.php;
+## # pop3_capabilities "TOP" "USER";
+## # imap_capabilities "IMAP4rev1" "UIDPLUS";
 #
-#       server {
-#               listen     localhost:110;
-#               protocol   pop3;
-#               proxy      on;
-#       }
+## server {
+## listen     localhost:110;
+## protocol   pop3;
+## proxy      on;
+## }
 #
-#       server {
-#               listen     localhost:143;
-#               protocol   imap;
-#               proxy      on;
-#       }
+## server {
+## listen     localhost:143;
+## protocol   imap;
+## proxy      on;
+## }
 #}
 ```

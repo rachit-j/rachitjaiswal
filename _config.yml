@@ -20,8 +20,8 @@
 
 title: Rachit Jaiswal
 email: rjaiswal.sd.77@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My name is Rachit Jaiswal, and I am a software engineer. This is my personal blog where I share my thoughts, experiences, and insights on software development, technology, and life in general.
+description: >-
+  Rachit Jaiswal is a Carnegie Mellon computer science student working on AI tools, robotics perception, systems, and mathematical search.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rachitjaiswal.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: 
@@ -51,3 +51,22 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Signal metadata; existing pages migrate in Phase 2.
+signal:
+  title: "Rachit Jaiswal | AI, Robotics & Systems"
+  description: "Rachit Jaiswal is a Carnegie Mellon computer science student working on AI tools, robotics perception, systems, and mathematical search."
+
+# Private design/content inputs and development outputs must never be served.
+exclude:
+  - docs
+  - iteration
+  - signal-site
+  - rachit-website-content-handoff
+  - graphify-out
+  - node_modules
+  - data
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - assets/resume

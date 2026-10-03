@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include signal/head.html %}
+</head>
+<body{% if page.has_cover %} class="has-cover"{% endif %}>
+<a class="skip" href="#main">Skip to content</a>
+{% include signal/header.html %}
+{{ content }}
+{% include signal/footer.html %}
+{% include signal/tracker.html %}
+</body>
+</html>

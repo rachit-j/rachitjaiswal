@@ -1,0 +1,32 @@
+---
+layout: signal
+title: ARUW — Real-Time Perception
+nav: projects
+description: Optimized a Jetson-based detection and classification pipeline for competition robotics.
+---
+
+<main id="main">
+  <article aria-labelledby="cs-h">
+    <div class="wrap cs-head">
+      <a class="crumb" href="/projects">All work</a>
+      <h1 class="h-page ruled" id="cs-h">ARUW — Real-Time Perception</h1>
+      <div class="cs-meta"><span class="state ">Completed contribution</span><span class="ctx">Advanced Robotics at UW, September 2025–June 2026, Vision Specialist</span></div>
+      <p class="cs-summary">Optimized a Jetson-based detection and classification pipeline for competition robotics.</p>
+    </div>
+    <div class="flow grid-paper" data-flow="flow-aruw-perception">
+      <div class="wrap">
+        <div class="flow-cap"><span>Detection pipeline on the Jetson. Select a stage.</span><button class="replay" type="button">Replay</button></div>
+        <ol class="stages" role="tablist" aria-label="ARUW — Real-Time Perception stages"></ol>
+        <div class="note" role="tabpanel" tabindex="0"></div>
+      </div>
+    </div>
+    <script type="application/json" id="flow-aruw-perception">[{"k": "preprocess", "v": "GPU preprocessing", "t": "GPU-accelerated preprocessing of camera frames before they reach the model.", "tools": "CUDA"}, {"k": "execute", "v": "YOLO-based model", "t": "Optimized execution of the YOLO-based detector and classifier with TensorRT and quantization.", "tools": "TensorRT, quantization"}, {"k": "postprocess", "v": "GPU postprocessing", "t": "GPU-accelerated postprocessing of detections and classifications.", "tools": "CUDA"}, {"k": "transfer", "v": "CPU–GPU memory", "t": "Improved CPU–GPU memory transfers. Across the pipeline, end-to-end latency fell from roughly 30 ms to 6–7 ms.", "tools": "NVIDIA Jetson"}]</script>
+    <div class="wrap cs-body">
+      <div class="cs-text"><section><h2 class="h-sub">The problem</h2><p>Competition robots need perception results quickly enough to act on moving opponents. The whole pipeline matters: preprocessing, model execution, postprocessing, and moving data between CPU and GPU.</p></section><section><h2 class="h-sub">My contribution</h2><p>I optimized a YOLO-based detector and classifier on NVIDIA Jetson using TensorRT, CUDA, quantization, and GPU-accelerated preprocessing and postprocessing. I also improved model execution and CPU–GPU memory transfers.</p></section><section><h2 class="h-sub">Result</h2><p>End-to-end latency fell from roughly 30 ms to 6–7 ms. ARUW placed third at the 2026 ARC Robotics Competition, a team result.</p></section></div>
+      <aside class="facts" aria-label="Project facts"><div class="proof"><b>~30 ms → 6–7 ms</b><span>end-to-end pipeline latency, roughly</span></div><dl><dt>Role</dt><dd>Vision Specialist</dd><dt>Team</dt><dd>Advanced Robotics at the University of Washington</dd><dt>Dates</dt><dd>September 2025–June 2026</dd><dt>Tools</dt><dd>TensorRT, CUDA, quantization, NVIDIA Jetson</dd></dl></aside>
+    </div>
+    <nav class="wrap next" aria-label="Next project">
+      <a class="row" href="/projects/kasmv2"><span class="k">Next project</span><span class="row-t">KasmV2</span></a>
+    </nav>
+  </article>
+</main>

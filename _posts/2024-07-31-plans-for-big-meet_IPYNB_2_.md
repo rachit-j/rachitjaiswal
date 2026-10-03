@@ -1,12 +1,17 @@
 ---
 layout: post
 title: Agenda for Presentation Aug 1
-description: Presentation agenda and overview for district/sponsor presentation on August 1st, 2024. 
+description: "An agenda for the KasmV2 presentation on August 1, 2024."
 tags:
   - KasmV2
   - AWS
   - Developer
 project_tag: kasmv2
+
+excerpt: >-
+  An agenda for the KasmV2 presentation on August 1, 2024.
+archive_notice: true
+nav: notebook
 ---
 
 <p>Plans for big meet</p>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parked component: work matrix | Signal</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/signal.css">
+<!--
+  PARKED COMPONENT — not linked from any page.
+  A projects-by-area dot matrix, removed from the homepage to keep it lean.
+  To reuse: copy the <style> block into signal.css (section "parked: matrix")
+  and the .matrix-wrap markup into the page. Uses Signal tokens only; no JS.
+  Categorization is an editorial judgment, not a fact from the content handoff.
+-->
+<style>
+.matrix-wrap{border:1px solid var(--ink)}
+.matrix-cap{display:flex; justify-content:space-between; gap:1rem; padding:.55rem .8rem; border-bottom:1px solid var(--ink); font:500 .76rem var(--mono)}
+.matrix-cap span:last-child{color:var(--graph); font-weight:400}
+.matrix-scroll{overflow-x:auto}
+table.matrix{border-collapse:collapse; width:100%; min-width:34rem; font-size:.92rem}
+.matrix th,.matrix td{border-bottom:1px solid var(--hair2); padding:.6rem .7rem; text-align:center; transition:background .2s}
+.matrix thead th{font:400 .72rem/1.25 var(--mono); color:var(--graph); vertical-align:bottom; border-bottom:1px solid var(--hair)}
+.matrix tbody th{text-align:left; font-weight:500; white-space:nowrap}
+.matrix tbody th a{text-decoration:none; border-bottom:1px solid var(--sig)}
+.matrix tbody th small{color:var(--graph); font:400 .78rem var(--mono); margin-left:.4rem}
+.matrix .dot{display:inline-block; width:.6rem; height:.6rem; border-radius:50%; background:var(--ink); transition:transform .25s var(--ease), background .2s}
+.matrix tr:hover td,.matrix tr:focus-within td,.matrix tr:hover th,.matrix tr:focus-within th{background:var(--sig-soft)}
+.matrix tr:hover .dot,.matrix tr:focus-within .dot{background:var(--sig); transform:scale(1.35)}
+.matrix tbody tr:last-child th,.matrix tbody tr:last-child td{border-bottom:0}
+@media (prefers-reduced-motion:reduce){.matrix *{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap" style="padding-block:3rem">
+  <p class="mono muted" style="font-size:.8rem">Parked component, not linked from the site</p>
+  <h1 class="h-sec" style="margin:0 0 2rem">Work matrix</h1>
+
+  <div class="matrix-wrap">
+    <div class="matrix-cap"><span>Where recent work sits</span><span>● involved</span></div>
+    <div class="matrix-scroll">
+    <table class="matrix">
+      <caption class="vh">Recent work by area</caption>
+      <thead><tr><th scope="col"><span class="vh">Work</span></th><th scope="col">AI &amp; retrieval</th><th scope="col">Perception</th><th scope="col">Systems &amp; infra</th><th scope="col">Networks &amp; measurement</th><th scope="col">Used by others</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Qualcomm <small>2026</small></th><td><i class="dot" aria-label="yes"></i></td><td></td><td></td><td></td><td><i class="dot" aria-label="yes"></i></td></tr>
+        <tr><th scope="row"><a href="../work/math-ai.html">Theorem retrieval</a> <small>2026</small></th><td><i class="dot" aria-label="yes"></i></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th scope="row">CAIDA <small>2026–</small></th><td></td><td></td><td><i class="dot" aria-label="yes"></i></td><td><i class="dot" aria-label="yes"></i></td><td></td></tr>
+        <tr><th scope="row"><a href="../work/aruw-perception.html">ARUW perception</a> <small>2025–26</small></th><td></td><td><i class="dot" aria-label="yes"></i></td><td><i class="dot" aria-label="yes"></i></td><td></td><td></td></tr>
+        <tr><th scope="row"><a href="../work/kasmv2.html">KasmV2</a> <small>2024–25</small></th><td></td><td></td><td><i class="dot" aria-label="yes"></i></td><td></td><td><i class="dot" aria-label="yes"></i></td></tr>
+        <tr><th scope="row">Hive <small>in development</small></th><td><i class="dot" aria-label="yes"></i></td><td></td><td><i class="dot" aria-label="yes"></i></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</main>
+</body>
+</html>
