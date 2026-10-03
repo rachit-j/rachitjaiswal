@@ -308,3 +308,7 @@ CMR adds a responsive interactive SVG graph experiment in the case-study flow ba
 Rachit confirms acceptance at the NeurIPS 2026 Math AI Workshop; state acceptance, not presentation. Keep the existing ICML 2026 presentation fact.
 
 2026-10-03 — Rachit updates the primary public contact email to `jaiswal.rachit07@gmail.com`, superseding the handoff address.
+
+### 2026-10-03 — Cover identity scroll transition
+
+Rachit requests that the homepage name and contact buttons remain visible while the introductory About copy enters, then move upward and fade only as the identity begins leaving the viewport. This replaces the original early progress-based fade and slight parallax. Move the identity upward with the scroll distance, keeping it above the rising sheet; begin fading when its top reaches the fixed header and complete the fade as it exits. Scrolling back restores it. Keep the reference canvas, sheet, header, and tracker behavior. Separate home-only assets override `.cover-inner`; reduced motion retains a stationary identity with no fade, and no-JS retains the original static cover. Fully faded contact controls are inert and hidden from assistive technology.

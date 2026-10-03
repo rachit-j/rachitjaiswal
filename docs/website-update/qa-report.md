@@ -37,3 +37,7 @@ On 2026-10-03, a fresh Jekyll build completed successfully. Isolated Playwright 
 ## CMR iteration checks
 
 2026-10-03: the build passed after the CMR iteration. Isolated WebKit passed checks on the eight affected routes at 360, 390, and 1440 pixels, with one h1 and no horizontal overflow. WCAG 2.1 A/AA axe reported no violations on those routes. The CMR layer buttons and radius slider worked with mouse and keyboard; reducing the radius broke paths and increasing it reconnected both. No browser script errors occurred. The static diagram remained visible without JavaScript. Featured order, workshop acceptance, six Notebook filters, retained historical leadership entries, and the old leadership query falling back to All passed. Desktop/mobile screenshots were visually inspected. Original Signal assets are unchanged.
+
+## Cover transition iteration
+
+2026-10-03: fresh build passed. Isolated WebKit checked the cover at 1440×900 and 390×844: identity stays opaque above the entering sheet, fades near the header, becomes inert/aria-hidden after exiting, and restores on reverse scroll. Neither viewport overflowed; WCAG 2.1 A/AA axe reported zero violations at the initial position. Reduced-motion identity remains stationary and opaque; no-JavaScript identity remains visible. No script errors occurred. Temporary preview stopped after verification.

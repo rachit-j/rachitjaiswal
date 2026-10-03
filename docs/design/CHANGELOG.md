@@ -9,3 +9,5 @@
 2026-10-03 — Rachit specifies CMR second after Math AI and confirms NeurIPS 2026 Math AI Workshop acceptance.
 
 2026-10-03 — Update the primary contact email to jaiswal.rachit07@gmail.com.
+
+2026-10-03 — Keep the cover identity visible above the entering intro; move it upward with scrolling and fade at the viewport edge.
