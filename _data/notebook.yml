@@ -5,6 +5,15 @@ groups:
       - kind: systems
         now: true
         when: Ongoing
+        title: CMR
+        role: LiDAR lane detection
+        summary: I’m working on LiDAR lane detection using graph theory.
+        links:
+          - label: Case study
+            href: /projects/cmr
+      - kind: systems
+        now: true
+        when: Ongoing
         title: Hive
         role: Personal project
         summary: I’m developing Hive, a personal agent platform for coordinating AI agents and tools across local and cloud environments.
@@ -42,7 +51,7 @@ groups:
         summary: Worked on mathematical theorem retrieval across natural language, LaTeX, and Lean.
         notes:
           - Developed a fine-tuned embedder with guidance from Vasily Ilin and Henry Kvinge.
-          - Presented the work at the ICML 2026 AI for Math Workshop.
+          - Presented the work at the ICML 2026 AI for Math Workshop; accepted at the NeurIPS 2026 Math AI Workshop.
         links:
           - label: Case study
             href: /projects/math-ai

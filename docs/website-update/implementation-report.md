@@ -72,3 +72,7 @@ To run: `bundle exec jekyll serve --host 127.0.0.1 --port 4001` (use another por
 The user explicitly authorized committing the rebuilt About page and pushing `webv2` after an approval-review block about the pre-existing edit. The old edit is preserved in `/private/tmp/rachit-about-before-signal.html` and `.patch`. No merge, deployment, DNS or hosting change is authorized or performed. Push status is reported in the final response after execution.
 
 Optional facts/projects held and safe fallbacks are detailed in `content-verification.md`; none blocks the verified update. Existing unrelated untracked assets/dist, iteration, node_modules and local graph files are preserved outside these implementation commits.
+
+## 2026-10-03 iteration
+
+Contact now says Email. Featured work is Math AI, CMR, ARUW. KasmV2 moved to Earlier projects and its original URL remains. CMR has a new case study with a synthetic interactive SVG point-cloud/graph/path experiment; only the user-confirmed project focus is asserted. Math AI now records user-confirmed NeurIPS 2026 Math AI Workshop acceptance. Leadership’s Notebook filter is removed, with its historical entries retained in All. Design docs were updated first. The isolated WebKit build and affected-route checks passed; see the QA report. Graphify’s local code graph was refreshed (496 nodes, 514 edges); internal graph outputs remain excluded and untracked.

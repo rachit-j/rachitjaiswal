@@ -121,7 +121,7 @@ In production, the "Earlier projects" rows on `/projects` link to their existing
 
 - **Home:** the cover (lockup, icons, scroll cue, equation, pause), then a sheet with the intro statement and two links (Explore my work, Open the notebook), "Selected work" (3 rows plus an "All work" link), the ink notebook teaser (CMU, Qualcomm, CAIDA, then Open the notebook), and the footer.
 - **Work:** a ruled page title, a lede, the three case-study rows, the Hive line (In development), and an "Earlier projects" list.
-- **Case study:** a crumb ("All work"), a ruled title, the state and context line, a one-sentence summary, the flow band, the prose sections and facts aside, and a "Next project" row (Math AI → ARUW → KasmV2 → Math AI).
+- **Case study:** a crumb ("All work"), a ruled title, the state and context line, a one-sentence summary, the flow band, the prose sections and facts aside, and a "Next project" row (Math AI → CMR → ARUW → Math AI).
 - **Notebook:** a ruled title, a lede, a sticky filter bar with a count, a year index, and a log grouped In progress / 2026 / 2025 / 2024 / 2023 / 2022 / 2019 / Earlier.
 - **About:** a ruled title, the about intro (handoff), a link to the notebook, then Education and Capabilities.
 
@@ -133,7 +133,7 @@ In production, the "Earlier projects" rows on `/projects` link to their existing
 | Contact icons | Inline SVG, copied from the reference | Drawn envelope, GitHub mark, LinkedIn "in" |
 | Favicon | Undamped 2 : 3 harmonograph as an inline SVG data URI | Copy the `<link rel="icon">` from the reference `<head>` |
 | Tagline | Handoff landing copy | "AI · Robotics · Systems · Human-computer interaction" |
-| Contact details | Handoff `public-content.json` | Email `rjaiswal.sd.77@gmail.com` ("Email Rachit"), GitHub `rachit-j`, LinkedIn |
+| Contact details | Handoff `public-content.json` | Email `rjaiswal.sd.77@gmail.com` ("Email"), GitHub `rachit-j`, LinkedIn |
 
 ## 7. Components
 
@@ -174,7 +174,7 @@ A full-viewport ink panel (`position: sticky; top: 0; height: 100svh; min-height
 The original landing card without its glass panel. `.avatar-lg` (a 4.75–9.5rem circle inside a 1.5px ring, white on the cover) sits beside the `h1` name. A violet signal dot sits on the ring at the top right. The tagline sits under the name. A rule runs under the whole lockup. Below 540px the photo stacks above the name.
 
 ### 7.5 Contact icons (`.icon-links`)
-Three 2.75rem squares with a 1.5px border and an inline SVG icon (white on the cover, ink on paper); on hover each fills violet with a white icon. Each has an `aria-label` ("Email Rachit", "GitHub", "LinkedIn").
+Three 2.75rem squares with a 1.5px border and an inline SVG icon (white on the cover, ink on paper); on hover each fills violet with a white icon. Each has an `aria-label` ("Email", "GitHub", "LinkedIn").
 
 ### 7.6 Work rows (`.rows`, `.row`, `.row.static`)
 Hairline-separated rows. Left: a large Bricolage title (`.row-t`) with mono context (`.row-ctx`). Right: a bold proof line and a one-sentence summary (`.row-s`). On hover or focus, a violet ↳ slides in before the title.
@@ -196,7 +196,7 @@ A dot plus mono text. The ink dot means completed or historical; the pulsing vio
 `.cs-head` (crumb, `h1.h-page.ruled`, `.cs-meta` with the state and context, `.cs-summary`), then the flow band, then `.cs-body`: `.cs-text` (h2 sections) and a sticky `.facts` aside (proof, `dl` facts, one link), then `nav.next`.
 
 ### 7.11 Notebook (`[data-notebook]` on `<main>`)
-- `.nb-tools`: filter buttons (`data-kind`: all, industry, research, systems, education, writing, leadership) using `aria-pressed`, plus `.count` (`aria-live`). The filter is reflected in `?filter=`, so case studies can link to a filtered view. Visible entries fade in with a stagger when the filter changes.
+- `.nb-tools`: filter buttons (`data-kind`: all, industry, research, systems, education, writing) using `aria-pressed`, plus `.count` (`aria-live`). The filter is reflected in `?filter=`, so case studies can link to a filtered view. Visible entries fade in with a stagger when the filter changes.
 - `.years`: the year index, sticky on desktop and a horizontal strip on mobile. The current group is marked with `aria-current="true"`.
 - `.log`: groups (`section.yr-group#y2026`, etc.) of `article.entry[data-kind]`. A spine runs down the left and fills violet with scroll (`--p`). Nodes are violet for `.now`, hollow ink for past entries, and small gray for `.writing`.
 - Entry anatomy: `.e-when` (mono), `h3`, `.e-role`, a paragraph, optional `.e-notes` (violet-tick bullets), and an `.e-foot` with links or a `.tag`.
@@ -207,7 +207,7 @@ A dot plus mono text. The ink dot means completed or historical; the pulsing vio
 The homepage notebook teaser: three recent entries on ink, then a link.
 
 ### 7.13 Signal footer (`.site-foot#contact`)
-On every page: "Contact," one line of copy, and large link rows (Email Rachit, GitHub, LinkedIn) that slide right on hover with mono details. Below that is a thin ink line with the name.
+On every page: "Contact," one line of copy, and large link rows (Email, GitHub, LinkedIn) that slide right on hover with mono details. Below that is a thin ink line with the name.
 
 ### 7.14 Prose (blog posts and legacy pages)
 Not in the reference; extend `signal.css` with a `.prose` section that follows these rules:
@@ -295,3 +295,14 @@ signal-site/
 ## 13. Changing this design
 
 When Rachit asks for a design change, update this file first (tokens, component text, decision log), then the code, in the same commit. Keep this file in the repository at `docs/design/DESIGN.md`, excluded from the built site.
+
+
+### 2026-10-03 — CMR iteration
+
+Rachit replaces KasmV2 in featured work with ongoing CMR work on LiDAR lane detection using graph theory. The home and Work lists run Math AI → CMR → ARUW; KasmV2 moves to Earlier projects and keeps its existing route and historical Notebook entries. This reverses the original three-project selection. No acronym expansion, dates, results, affiliations, or repository links are inferred.
+
+Contact text and the email icon accessible name are now “Email.” Remove the Leadership filter button only; retain its historical entries under All.
+
+CMR adds a responsive interactive SVG graph experiment in the case-study flow band, using the existing paper grid, ink, violet, mono labels, square controls, and ruled borders. Controls select Returns, Graph, or Lanes and adjust the connection radius. A deterministic illustrative point cloud and distance-based graph demonstrate connectivity; the diagram explicitly identifies itself as illustrative rather than recorded LiDAR or a performance result. No autoplay or motion is needed. The full SVG and explanation remain visible without JavaScript; controls appear only after initialization. Keyboard users can operate every button and slider. Classes `.lidar-demo`, `.lidar-controls`, `.lidar-viz`, `.lidar-points`, `.lidar-edges`, `.lidar-lanes`, `.lidar-status` live in a separate page-only stylesheet; original Signal CSS/JS stay unchanged.
+
+Rachit confirms acceptance at the NeurIPS 2026 Math AI Workshop; state acceptance, not presentation. Keep the existing ICML 2026 presentation fact.

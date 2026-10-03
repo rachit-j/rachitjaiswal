@@ -66,3 +66,7 @@ External-link results and remaining QA limitations are recorded separately in `q
 - Omitted the blocked/unverified DotENV discussion/library reference. The original article remains archived with a historical notice.
 - Kasm’s mismatched old repository remains omitted from the case study; the notebook writing links provide real project documentation.
 - LinkedIn is preserved as the supplied public identity link; automated requests returned 999, so automated reachability is inconclusive.
+
+## 2026-10-03 user-confirmed updates
+
+Rachit directly confirms ongoing CMR work on LiDAR lane detection using graph theory, and acceptance of the Math AI work at the NeurIPS 2026 Math AI Workshop. These later instructions supplement the original handoff. CMR dates, expanded name, affiliations, metrics, and repository links remain omitted. The diagram is synthetic and illustrative. Leadership entries remain under All; only the filter tab is removed.

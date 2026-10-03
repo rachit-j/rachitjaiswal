@@ -1,0 +1,24 @@
+/* CMR graph experiment: page-only extension of Signal tokens. */
+.lidar-demo .flow-cap {flex-wrap:wrap;gap:1rem}
+.lidar-demo .flow-cap h2 {margin:0}
+.lidar-controls {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:center;margin:1.5rem 0}
+.lidar-controls[hidden] {display:none}
+.lidar-controls [role="group"] {display:flex;flex-wrap:wrap;gap:.5rem}
+.lidar-controls button {font:500 .8rem var(--mono);padding:.7rem .9rem;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer}
+.lidar-controls button[aria-pressed="true"] {background:var(--ink);color:var(--paper)}
+.lidar-controls button:hover {border-color:var(--sig)}
+.lidar-controls label {display:grid;grid-template-columns:1fr auto;gap:.5rem;font:.8rem var(--mono);min-width:12rem}
+.lidar-controls input {grid-column:1 / -1;width:100%;accent-color:var(--sig);cursor:pointer}
+.lidar-controls :focus-visible {outline:2px solid var(--sig);outline-offset:4px}
+.lidar-viz {margin:0;border-top:1px solid var(--ink)}
+.lidar-viz svg {display:block;width:100%;height:auto;max-height:32rem}
+.lidar-viz text {font:13px var(--mono);fill:var(--ink)}
+.lidar-road {fill:none;stroke:var(--ink);stroke-width:1;opacity:.25}
+.lidar-center {fill:none;stroke:var(--ink);stroke-dasharray:9 12;opacity:.25}
+.lidar-points {fill:var(--ink);opacity:.65}
+.lidar-edges {stroke:var(--ink);stroke-width:1;opacity:.18}
+.lidar-lanes {fill:none;stroke:var(--sig);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.lidar-sensor {fill:var(--ink)}
+.lidar-viz figcaption {font:.8rem/1.65 var(--mono);max-width:65ch;padding-top:1rem}
+.lidar-status {font:.8rem/1.65 var(--mono);border-bottom:1px solid var(--ink);padding-bottom:1rem;margin-bottom:0}
+@media(max-width:480px) {.lidar-controls label {width:100%}.lidar-controls button {padding:.65rem .7rem}.lidar-viz svg {min-height:220px}}

@@ -33,3 +33,7 @@ The preview was verified through isolated WebKit, and the clean Jekyll output wa
 ## Final rerun after push
 
 On 2026-10-03, a fresh Jekyll build completed successfully. Isolated Playwright WebKit reran all 35 routes: zero mobile overflow, heading, skip-link, no-JavaScript, WCAG 2.1 A/AA axe, or internal HTTP-link failures. The three case-study flows, seven Notebook filters, Writing query, year index/spine, reduced motion, and covered-canvas idle checks passed again. Build exclusion checks passed and all three unrelated PDFs remain. The preview used the same committed source; the fresh build was checked separately. External links and screenshots were not repeated in this focused rerun; their results and limitations remain documented above. Existing Minima Sass deprecation warnings remain nonfatal.
+
+## CMR iteration checks
+
+2026-10-03: the build passed after the CMR iteration. Isolated WebKit passed checks on the eight affected routes at 360, 390, and 1440 pixels, with one h1 and no horizontal overflow. WCAG 2.1 A/AA axe reported no violations on those routes. The CMR layer buttons and radius slider worked with mouse and keyboard; reducing the radius broke paths and increasing it reconnected both. No browser script errors occurred. The static diagram remained visible without JavaScript. Featured order, workshop acceptance, six Notebook filters, retained historical leadership entries, and the old leadership query falling back to All passed. Desktop/mobile screenshots were visually inspected. Original Signal assets are unchanged.
