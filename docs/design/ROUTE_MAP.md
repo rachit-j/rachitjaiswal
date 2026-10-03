@@ -70,3 +70,7 @@ Integrated redesign, 2026-10-03. Branch: `webv2` (opening user instruction overr
 ## Final route behavior
 
 `/` and `/home` share the same cover/sheet include, with canonical `/`. `/about`, `/projects`, `/blogs`, `/notebook` and all project routes emit their `.html` counterparts; both representations work in the Jekyll preview. All 17 original dated post paths remain unchanged.
+
+## 2026-10-03 iteration
+
+`/projects/cmr` → `projects/cmr.html` → Signal, with page-only `assets/lidar.css` and `assets/lidar.js`. Featured order: Math AI → CMR → ARUW. KasmV2 remains at its original route and is listed in Earlier projects.

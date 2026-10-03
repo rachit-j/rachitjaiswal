@@ -1,0 +1,54 @@
+---
+layout: signal
+title: CMR — LiDAR Lane Detection
+nav: projects
+lidar_demo: true
+description: Ongoing work on LiDAR lane detection using graph theory.
+---
+<main id="main">
+  <article aria-labelledby="cs-h">
+    <div class="wrap cs-head">
+      <a class="crumb" href="/projects">All work</a>
+      <h1 class="h-page ruled" id="cs-h">CMR — LiDAR Lane Detection</h1>
+      <div class="cs-meta"><span class="state live">In progress</span><span class="ctx">Robotics / Graph theory</span></div>
+      <p class="cs-summary">I’m working on LiDAR lane detection using graph theory.</p>
+    </div>
+    <section class="flow grid-paper lidar-demo" aria-labelledby="lidar-heading" data-lidar>
+      <div class="wrap">
+        <div class="flow-cap"><h2 class="h-sub" id="lidar-heading">From returns to connected lanes</h2><span class="k">Explore the graph</span></div>
+        <div class="lidar-controls" hidden>
+          <div role="group" aria-label="Diagram layer">
+            <button type="button" data-layer="returns" aria-pressed="false">01 Returns</button>
+            <button type="button" data-layer="graph" aria-pressed="false">02 Graph</button>
+            <button type="button" data-layer="lanes" aria-pressed="true">03 Lanes</button>
+          </div>
+          <label for="lidar-radius">Connection radius <output id="lidar-radius-value" for="lidar-radius">54</output><input id="lidar-radius" type="range" min="18" max="90" step="2" value="54" aria-describedby="lidar-caption"></label>
+        </div>
+        <figure class="lidar-viz">
+          <svg viewBox="0 0 720 410" role="img" aria-labelledby="lidar-title lidar-desc">
+            <title id="lidar-title">Illustrative LiDAR lane graph</title>
+            <desc id="lidar-desc">A synthetic point cloud with two curved lane boundaries. Nearby returns form graph edges; highlighted paths trace connected boundaries.</desc>
+            <path class="lidar-road" d="M210 380 Q220 170 325 40 M530 380 Q530 170 475 40"/>
+            <path class="lidar-center" d="M360 360 Q360 160 400 55"/>
+            <g class="lidar-edges"></g>
+            <g class="lidar-points"><circle cx="253.0" cy="350" r="2.8"/><circle cx="253.6" cy="332" r="2.8"/><circle cx="258.1" cy="314" r="2.8"/><circle cx="269.2" cy="296" r="2.8"/><circle cx="267.4" cy="278" r="2.8"/><circle cx="276.1" cy="260" r="2.8"/><circle cx="281.9" cy="242" r="2.8"/><circle cx="287.2" cy="224" r="2.8"/><circle cx="287.2" cy="206" r="2.8"/><circle cx="296.5" cy="188" r="2.8"/><circle cx="299.5" cy="170" r="2.8"/><circle cx="307.0" cy="152" r="2.8"/><circle cx="302.5" cy="134" r="2.8"/><circle cx="315.3" cy="116" r="2.8"/><circle cx="310.6" cy="98" r="2.8"/><circle cx="319.9" cy="80" r="2.8"/><circle cx="319.5" cy="62" r="2.8"/><circle cx="473.4" cy="350" r="2.8"/><circle cx="468.4" cy="332" r="2.8"/><circle cx="471.4" cy="314" r="2.8"/><circle cx="470.6" cy="296" r="2.8"/><circle cx="479.0" cy="278" r="2.8"/><circle cx="477.9" cy="260" r="2.8"/><circle cx="475.8" cy="242" r="2.8"/><circle cx="476.8" cy="224" r="2.8"/><circle cx="476.6" cy="206" r="2.8"/><circle cx="478.5" cy="188" r="2.8"/><circle cx="482.6" cy="170" r="2.8"/><circle cx="481.6" cy="152" r="2.8"/><circle cx="484.2" cy="134" r="2.8"/><circle cx="477.7" cy="116" r="2.8"/><circle cx="484.8" cy="98" r="2.8"/><circle cx="485.4" cy="80" r="2.8"/><circle cx="481.8" cy="62" r="2.8"/><circle cx="479.4" cy="311.4" r="2.8"/><circle cx="187.7" cy="198.8" r="2.8"/><circle cx="180.7" cy="291.7" r="2.8"/><circle cx="387.1" cy="95.9" r="2.8"/><circle cx="345.1" cy="290.3" r="2.8"/><circle cx="393.4" cy="100.2" r="2.8"/><circle cx="566.6" cy="81.4" r="2.8"/><circle cx="524.4" cy="347.5" r="2.8"/><circle cx="483.0" cy="339.3" r="2.8"/><circle cx="383.9" cy="128.6" r="2.8"/><circle cx="357.5" cy="279.1" r="2.8"/><circle cx="490.8" cy="176.5" r="2.8"/><circle cx="571.3" cy="75.2" r="2.8"/><circle cx="368.1" cy="76.4" r="2.8"/><circle cx="306.1" cy="351.9" r="2.8"/><circle cx="198.1" cy="350.8" r="2.8"/><circle cx="552.3" cy="264.6" r="2.8"/><circle cx="170.2" cy="201.7" r="2.8"/><circle cx="456.4" cy="92.6" r="2.8"/><circle cx="279.2" cy="91.6" r="2.8"/><circle cx="524.6" cy="330.4" r="2.8"/><circle cx="560.6" cy="282.7" r="2.8"/><circle cx="404.0" cy="83.0" r="2.8"/><circle cx="361.6" cy="285.6" r="2.8"/><circle cx="485.2" cy="72.8" r="2.8"/><circle cx="148.7" cy="90.6" r="2.8"/><circle cx="561.0" cy="97.9" r="2.8"/><circle cx="320.6" cy="203.0" r="2.8"/><circle cx="542.7" cy="104.3" r="2.8"/><circle cx="262.7" cy="288.9" r="2.8"/><circle cx="183.7" cy="112.6" r="2.8"/><circle cx="156.3" cy="342.9" r="2.8"/><circle cx="250.0" cy="210.4" r="2.8"/><circle cx="315.6" cy="349.6" r="2.8"/><circle cx="465.4" cy="239.3" r="2.8"/><circle cx="365.3" cy="142.7" r="2.8"/><circle cx="522.6" cy="94.9" r="2.8"/><circle cx="424.8" cy="150.6" r="2.8"/><circle cx="269.3" cy="196.6" r="2.8"/><circle cx="230.1" cy="236.6" r="2.8"/><circle cx="176.8" cy="70.5" r="2.8"/><circle cx="208.6" cy="91.1" r="2.8"/><circle cx="540.2" cy="213.0" r="2.8"/><circle cx="450.4" cy="290.9" r="2.8"/><circle cx="219.4" cy="340.9" r="2.8"/><circle cx="317.9" cy="198.5" r="2.8"/><circle cx="364.7" cy="266.6" r="2.8"/><circle cx="490.8" cy="121.3" r="2.8"/><circle cx="517.7" cy="189.2" r="2.8"/><circle cx="258.0" cy="315.6" r="2.8"/><circle cx="537.4" cy="313.8" r="2.8"/><circle cx="290.6" cy="330.0" r="2.8"/><circle cx="494.1" cy="346.3" r="2.8"/><circle cx="484.7" cy="354.9" r="2.8"/><circle cx="360.1" cy="282.3" r="2.8"/><circle cx="496.5" cy="217.1" r="2.8"/><circle cx="371.9" cy="181.1" r="2.8"/><circle cx="535.8" cy="174.8" r="2.8"/><circle cx="480.9" cy="227.9" r="2.8"/><circle cx="463.1" cy="154.7" r="2.8"/><circle cx="180.5" cy="260.8" r="2.8"/><circle cx="210.3" cy="169.3" r="2.8"/><circle cx="496.7" cy="79.2" r="2.8"/><circle cx="555.0" cy="235.8" r="2.8"/><circle cx="397.5" cy="261.4" r="2.8"/></g>
+            <g class="lidar-lanes"><polyline points="253.0,350 253.6,332 258.1,314 269.2,296 267.4,278 276.1,260 281.9,242 287.2,224 287.2,206 296.5,188 299.5,170 307.0,152 302.5,134 315.3,116 310.6,98 319.9,80 319.5,62"/><polyline points="473.4,350 468.4,332 471.4,314 470.6,296 479.0,278 477.9,260 475.8,242 476.8,224 476.6,206 478.5,188 482.6,170 481.6,152 484.2,134 477.7,116 484.8,98 485.4,80 481.8,62"/></g>
+            <path class="lidar-sensor" d="M350 382L360 366L370 382Z"/>
+            <text x="378" y="383">LiDAR</text>
+            <text x="25" y="32">Point cloud → graph → lane paths</text>
+          </svg>
+          <figcaption id="lidar-caption">Illustrative point cloud, not recorded sensor data. Select a layer and adjust the radius to explore how local connections form continuous paths.</figcaption>
+        </figure>
+        <p class="lidar-status" role="status" aria-live="polite">Two illustrative lane boundaries over a synthetic point cloud.</p>
+      </div>
+    </section>
+    <div class="wrap cs-body">
+      <div class="cs-text">
+        <section><h2 class="h-sub">Current work</h2><p>My focus is lane detection from LiDAR using graph theory.</p></section>
+        <section><h2 class="h-sub">Explore the idea</h2><p>In this illustration, each return becomes a node. Nearby nodes connect into a directed graph, and paths through that graph trace two candidate lane boundaries. A smaller connection radius can break a path; a larger radius introduces more possible connections.</p><p>The experiment demonstrates the idea of graph connectivity. It is not a reconstruction of the project’s implementation or a claim about detection accuracy.</p></section>
+      </div>
+      <aside class="facts" aria-label="Project facts"><dl><dt>Project</dt><dd>CMR</dd><dt>Status</dt><dd>In progress</dd><dt>Focus</dt><dd>LiDAR lane detection</dd><dt>Approach</dt><dd>Graph theory</dd></dl></aside>
+    </div>
+    <nav class="wrap next" aria-label="Next project"><a class="row" href="/projects/aruw-perception"><span class="k">Next project</span><span class="row-t">ARUW — Real-Time Perception</span></a></nav>
+  </article>
+</main>
