@@ -215,7 +215,7 @@ Not in the reference; extend `signal.css` with a `.prose` section that follows t
 - `h2` Bricolage 700 1.6rem; `h3` Bricolage 700 1.25rem;
 - links underlined with a 2px `--sig` line;
 - inline `code` in Geist Mono on `--hair2`;
-- `pre` blocks on `--ink` with `--on-ink` text, mono 0.85rem, square corners, and `overflow-x: auto`;
+- `pre` blocks on `--ink` with `--on-ink` text, mono 0.85rem, square corners, and `overflow-x: auto`; rendered blocks have `tabindex="0"` for keyboard scrolling;
 - tables with hairline rules and mono header cells;
 - `blockquote` styled like `.proof`;
 - images at `max-width: 100%` with a 1px `--hair` border.

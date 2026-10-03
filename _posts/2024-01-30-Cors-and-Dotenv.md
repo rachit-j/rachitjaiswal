@@ -44,5 +44,5 @@ In SecurityConfig.java:
 
 Sick of your API Keys being exposed in your code? Sick of them being placed in github? Sick of them being accessable on the web? DotENV can change that!
 
-Simply put your keys with a name in a .env file. For historical discussion of integration with Spring Boot, see [DotENV and Spring Boot](https://stackoverflow.com/questions/58549361/using-dotenv-files-with-spring-boot).
+Simply put your keys with a name in a .env file.
 

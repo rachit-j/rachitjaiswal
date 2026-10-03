@@ -11,6 +11,6 @@ layout: signal
     </header>
     {% if page.archive_notice %}<aside class="note archive-notice" aria-label="Historical content">Originally written for a 2024 classroom or project environment. Commands and interfaces may differ in current versions.</aside>{% endif %}
     {% if page.canonical_post %}<aside class="note archive-notice">This earlier guide is preserved at its original address. See the <a href="{{ page.canonical_post }}">July 15 guide to manually adding Docker images</a>.</aside>{% endif %}
-    <div class="prose post-prose">{{ content }}</div>
+    <div class="prose post-prose">{{ content | replace: '<pre', '<pre tabindex="0"' }}</div>
   </article>
 </main>

@@ -102,8 +102,6 @@ Use the "Add" button for new configuration.  Or select pencil icon to edit exist
 
 #### Adapted EC2 Startup Script
 
-Obtain the [Kasm EC2 Startup Script](https://github.com/kasmtech/workspaces-autoscale-startup-scripts/blob/develop/1.15.0/docker_agents/ubuntu.sh)
-
 The AWS Internal IP did not work in script as obtained from Kasm Web Site did not work.  It was switched to obtain the `IP` using the more conventional `hostname -I`.  This is simply done by commenting out the `AWS Internal IP` line and using `OCI Internal IP`.
 
 Comment out AWS `IP` assignment lines
