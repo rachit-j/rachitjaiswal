@@ -1,0 +1,177 @@
+groups:
+  - id: in-progress
+    label: In progress
+    entries:
+      - kind: systems
+        now: true
+        when: Ongoing
+        title: Hive
+        role: Personal project
+        summary: A personal agent platform for coordinating AI agents and tools across local and cloud environments.
+        tag: In development
+  - id: y2026
+    label: '2026'
+    entries:
+      - kind: education
+        now: true
+        when: Fall 2026–
+        title: Carnegie Mellon University
+        role: School of Computer Science, Bachelor of Science
+        summary: Entered through the Human-Computer Interaction program after attending the University of Washington. Expected graduation June 2028.
+      - kind: industry
+        when: Jun–Aug 2026
+        title: Qualcomm
+        role: Software Engineering Intern, San Diego
+        summary: Built and deployed a production application for 200+ users to bring automotive product, configuration, and project information into one place.
+        notes:
+          - Developed agentic search across projects so users could find comparable products, compare technical specifications, and retrieve relevant information across customer engagements.
+          - Consolidated information from multiple sources to support product evaluation and technical requirements alignment.
+      - kind: research
+        now: true
+        when: Jan 2026–
+        title: CAIDA
+        role: Student Researcher, CAIDA REU, UC San Diego / San Diego Supercomputer Center
+        summary: Studying the growth and evolution of the Internet through network data analysis and high-performance computing.
+        notes:
+          - Work under the guidance of Kimberly C. Claffy and Ricky Mok.
+          - Supported CAIDA’s 10-week ESCALATE Training Program through instruction and experiments in Internet measurement and cybersecurity.
+      - kind: research
+        when: Jan–Jun 2026
+        title: University of Washington Math AI Lab
+        role: Student Researcher
+        summary: Worked on mathematical theorem retrieval across natural language, LaTeX, and Lean.
+        notes:
+          - Developed a fine-tuned embedder with guidance from Vasily Ilin and Henry Kvinge.
+          - Presented the work at the ICML 2026 AI for Math Workshop.
+        links:
+          - label: Case study
+            href: /projects/math-ai
+          - label: Paper on arXiv
+            href: https://arxiv.org/abs/2606.23959
+  - id: y2025
+    label: '2025'
+    entries:
+      - kind: systems
+        when: Sep 2025–Jun 2026
+        title: Advanced Robotics at the University of Washington
+        role: Vision Specialist
+        summary: Optimized a YOLO-based detection and classification pipeline on NVIDIA Jetson, reducing end-to-end latency from roughly 30 ms to 6–7 ms.
+        notes:
+          - Used TensorRT, CUDA, quantization, and GPU-accelerated preprocessing and postprocessing.
+          - Improved model execution and CPU–GPU memory transfers. ARUW placed third at the 2026 ARC Robotics Competition.
+        links:
+          - label: Case study
+            href: /projects/aruw-perception
+      - kind: education
+        when: 2025–2026
+        title: University of Washington
+        role: Paul G. Allen School of Computer Science & Engineering
+        summary: Computer Engineering; previous attendance.
+  - id: y2024
+    label: '2024'
+    archive_notice: Notes were originally written for a 2024 classroom or project environment. Commands and interfaces may differ in current versions.
+    entries:
+      - kind: systems
+        when: May 2024–Jul 2025
+        title: Poway Unified School District, KasmV2
+        role: Systems Engineer Intern
+        summary: Initiated and engineered a multi-server AWS platform delivering browser-based desktops and applications across five high schools.
+        notes:
+          - Built Docker and Nginx infrastructure with load balancing, AWS Auto Scaling, and Ansible/Terraform provisioning.
+          - Automated deployment and centralized access to containerized computing environments.
+        links:
+          - label: Case study
+            href: /projects/kasmv2
+      - kind: writing
+        writing: true
+        when: Jul 15, 2024
+        title: Kasm Persistent Data Configuration Guide
+        summary: Configuring persistent profiles for a Kasm workspace.
+        href: /2024/07/15/persistent-data_IPYNB_2_.html
+      - kind: writing
+        writing: true
+        when: Jul 15, 2024
+        title: Manual Addition of Docker Images to Kasm
+        summary: Adding a Docker image as a Kasm workspace when a registry entry is unavailable.
+        href: /2024/07/15/manual-registry-addition_IPYNB_2_.html
+      - kind: writing
+        writing: true
+        when: Jul 12, 2024
+        title: Terraform vs Ansible
+        summary: How infrastructure provisioning and configuration management fit together in KasmV2.
+        href: /2024/07/12/terraform-vs-ansible.html
+      - kind: writing
+        writing: true
+        when: Feb 7, 2024
+        title: 'Nginx Error: could not build the server_names_hash'
+        summary: Troubleshooting an Nginx server_names_hash configuration error.
+        href: /2024/02/07/server_names_hash_bucket_size-error.html
+      - kind: writing
+        writing: true
+        when: Jan 31, 2024
+        title: The Three Locations for Changing Your Spring Port
+        summary: Where application ports, container metadata, and published Docker ports appear in a Spring deployment.
+        href: /2024/01/31/CSA-change-port.html
+  - id: y2023
+    label: '2023'
+    entries:
+      - kind: industry
+        when: Aug–Nov 2023
+        title: TrinamiX
+        role: Intern, Laser-Induced Speckle Identification, Ludwigshafen am Rhein, Germany
+        summary: Trained machine learning models to identify materials from laser speckle patterns using fractal dimension calculations.
+        notes:
+          - Built a custom dataset pipeline using polarized lenses and high-resolution imaging to capture speckle samples.
+      - kind: research
+        when: Jun–Oct 2023
+        title: LLM Matching Research Project
+        role: Student Researcher, mentored by Naman Gupta
+        summary: Explored LLM-based conversation simulation and matching under the mentorship of Stanford PhD student Naman Gupta.
+        notes:
+          - Optimized Gale–Shapley-related LLM calls using lazy pool optimization and clustering, with a reported 70% reduction in compute time.
+      - kind: research
+        when: Jun–Oct 2023
+        title: Cambridge Centre for International Research
+        role: Hindi–English Code-Switched Translation
+        summary: Worked on Hindi–English code-switched translation using machine learning and NLP.
+  - id: y2022
+    label: '2022'
+    entries:
+      - kind: industry
+        when: Jun–Aug 2022
+        title: ColorTokens
+        role: Security Engineering Intern, San Francisco
+        summary: Built automation for Linux security services and used Python to automate log ingestion and anomaly detection.
+        notes:
+          - Supported vulnerability detection and remediation, reducing the need for manual review in server-network workflows.
+  - id: y2019
+    label: '2019'
+    entries:
+      - kind: leadership
+        when: Jun 2019–Mar 2025
+        title: CyberPatriot
+        role: Team Captain
+        summary: Captained a two-time national finalist and national champion team in Linux, Windows, and network security.
+        notes:
+          - Worked on vulnerability remediation, patching, service hardening, and live defensive exercises.
+      - kind: leadership
+        when: Jun 2019–Mar 2025
+        title: FIRST Tech Challenge, Team 15171 Scorpio
+        role: Captain and Programming Lead
+        summary: Led programming and team strategy, developing vision-based autonomous behavior and navigation for competition robots.
+        notes:
+          - Worked with OpenCV, neural networks, odometry, PID control, and finite state machines.
+          - Dean’s List Semifinalist in 2022 and 2023.
+  - id: earlier
+    label: Earlier
+    entries:
+      - kind: leadership
+        when: Undated
+        title: Tech Space
+        role: Founder and President
+        summary: Introduced peers to emerging technologies through workshops, demonstrations, and collaborations with engineers.
+      - kind: leadership
+        when: Undated
+        title: Aerospace & Rocketry Club
+        role: President
+        summary: Led projects involving drones, model rockets, and STEM outreach.

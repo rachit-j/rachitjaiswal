@@ -1,0 +1,30 @@
+---
+layout: signal
+title: Notebook
+description: Experience, research, and technical notes from Rachit Jaiswal, newest first.
+canonical_path: /notebook
+nav: notebook
+---
+<main id="main" data-notebook>
+  <div class="wrap page-head" style="padding-bottom:0">
+    <h1 class="h-page ruled">Notebook</h1>
+    <p class="lede">A running record of where I’ve worked, what I’ve researched, and what I’ve written down along the way. Newest first.</p>
+  </div>
+  <div class="nb-tools"><div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;width:100%">
+    <ul class="filters" aria-label="Filter entries"><li><button type="button" data-kind="all" aria-pressed="true">All</button></li><li><button type="button" data-kind="industry" aria-pressed="false">Industry</button></li><li><button type="button" data-kind="research" aria-pressed="false">Research</button></li><li><button type="button" data-kind="systems" aria-pressed="false">Robotics &amp; systems</button></li><li><button type="button" data-kind="education" aria-pressed="false">Education</button></li><li><button type="button" data-kind="writing" aria-pressed="false">Writing</button></li><li><button type="button" data-kind="leadership" aria-pressed="false">Leadership</button></li></ul><span class="count" aria-live="polite"></span>
+  </div></div>
+  <div class="wrap nb">
+    <nav aria-label="Jump to year"><ul class="years"><li><a href="#in-progress">In progress</a></li><li><a href="#y2026">2026</a></li><li><a href="#y2025">2025</a></li><li><a href="#y2024">2024</a></li><li><a href="#y2023">2023</a></li><li><a href="#y2022">2022</a></li><li><a href="#y2019">2019</a></li><li><a href="#earlier">Earlier</a></li></ul></nav>
+    <div class="log">
+    {% for group in site.data.notebook.groups %}
+    <section class="yr-group" id="{{ group.id }}" aria-labelledby="{{ group.id }}-h"><h2 id="{{ group.id }}-h">{{ group.label | escape }}</h2>
+      {% for entry in group.entries %}
+      <article class="entry{% if entry.now %} now{% endif %}{% if entry.writing %} writing{% endif %}" data-kind="{{ entry.kind }}"><div class="e-when">{{ entry.when | escape }}</div><div class="e-main"><h3>{% if entry.writing %}<a href="{{ entry.href | relative_url }}">{{ entry.title | escape }}</a>{% else %}{{ entry.title | escape }}{% endif %}</h3>{% if entry.role %}<span class="e-role">{{ entry.role | escape }}</span>{% endif %}<p>{{ entry.summary | escape }}</p>{% if entry.notes %}<ul class="e-notes">{% for note in entry.notes %}<li>{{ note | escape }}</li>{% endfor %}</ul>{% endif %}{% if entry.links %}<div class="e-foot">{% for link in entry.links %}<a class="ul-link" href="{{ link.href }}">{{ link.label | escape }}</a>{% endfor %}</div>{% elsif entry.tag %}<div class="e-foot"><span class="tag">{{ entry.tag | escape }}</span></div>{% elsif entry.writing %}<div class="e-foot"><span class="tag">Technical note, 2024</span></div>{% endif %}</div></article>
+      {% endfor %}
+      {% if group.archive_notice %}<p class="archive-note">{{ group.archive_notice | escape }} <a href="{{ '/blogs' | relative_url }}">All writing, including the archive</a></p>{% endif %}
+    </section>
+    {% endfor %}
+      <p class="empty-msg" hidden>No entries of this kind yet. Choose All to see everything.</p>
+    </div>
+  </div>
+</main>
