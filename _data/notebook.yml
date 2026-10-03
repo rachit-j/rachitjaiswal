@@ -7,7 +7,7 @@ groups:
         when: Ongoing
         title: Hive
         role: Personal project
-        summary: A personal agent platform for coordinating AI agents and tools across local and cloud environments.
+        summary: I’m developing Hive, a personal agent platform for coordinating AI agents and tools across local and cloud environments.
         tag: In development
   - id: y2026
     label: '2026'

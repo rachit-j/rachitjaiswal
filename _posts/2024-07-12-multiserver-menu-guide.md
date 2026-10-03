@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kasm Multi-Server Installer Guide
-description: This section below is the installation and menu guide for the Kasm multiserver installer.
+description: "A user-facing setup guide for the KasmV2 multi-server installer."
 tags:
   - KasmV2
   - AWS
@@ -11,6 +11,7 @@ project_tag: kasmv2
 excerpt: >-
   A user-facing setup guide for the KasmV2 multi-server installer.
 archive_notice: true
+nav: notebook
 ---
 
 ## Initialization Guide

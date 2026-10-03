@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Autoscale Configuration Guide
-description: How to configure Kasm to automatically scale agents
+description: "A historical guide to configuring and testing Kasm Docker-agent autoscaling."
 tags:
   - KasmV2
   - AWS
@@ -11,6 +11,7 @@ project_tag: kasmv2
 excerpt: >-
   A historical guide to configuring and testing Kasm Docker-agent autoscaling.
 archive_notice: true
+nav: notebook
 ---
 
 ## Step 1: Licensing the Kasm Workspaces Installation

@@ -1,6 +1,6 @@
 ---
 title: Nginx Error - could not build the server_names_hash
-description: How to solve the server_names_hash error
+description: "Troubleshooting an Nginx server_names_hash configuration error."
 toc: true
 layout: post
 tags:
@@ -12,6 +12,7 @@ project_tag: rift
 excerpt: >-
   Troubleshooting an Nginx server_names_hash configuration error.
 archive_notice: true
+nav: notebook
 ---
 
 

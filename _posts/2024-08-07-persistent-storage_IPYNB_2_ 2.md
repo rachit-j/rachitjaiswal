@@ -1,7 +1,7 @@
 ---
 layout: post
 title: S3 Persistent Storage
-description: How to configure Kasm to Store Persistent Data on S3
+description: "A historical guide to configuring S3-backed persistent storage for Kasm profiles."
 tags:
   - KasmV2
   - AWS
@@ -11,6 +11,7 @@ project_tag: kasmv2
 excerpt: >-
   A historical guide to configuring S3-backed persistent storage for Kasm profiles.
 archive_notice: true
+nav: notebook
 ---
 
 <p>Guide on how to configure S3 for persistent storage configuration.</p>

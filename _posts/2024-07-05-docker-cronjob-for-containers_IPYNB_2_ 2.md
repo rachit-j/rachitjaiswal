@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cronjob for Container Restart
-description: How to create a cronjob to check if the Kasm Docker images are running and auto-start them if not.
+description: "A historical script for restarting a Kasm-related Docker container."
 tags:
   - KasmV2
   - AWS
@@ -11,6 +11,7 @@ project_tag: kasmv2
 excerpt: >-
   A historical script for restarting a Kasm-related Docker container.
 archive_notice: true
+nav: notebook
 ---
 
 <ol>

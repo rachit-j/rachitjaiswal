@@ -1,6 +1,6 @@
 ---
 title: Some CORS and DotENV Notes
-description: We know you hate these so we made a doc on them!
+description: "Notes from a 2024 classroom deployment project on CORS configuration and environment variables."
 toc: true
 layout: post
 tags:
@@ -12,6 +12,7 @@ project_tag: rift
 excerpt: >-
   Notes from a 2024 classroom deployment project on CORS configuration and environment variables.
 archive_notice: true
+nav: notebook
 ---
 
 Cross origin resource sharing, or cors, is something that configures security for requests with additional headers and can restrict what kind of requests and where the requests come from.
@@ -43,5 +44,5 @@ In SecurityConfig.java:
 
 Sick of your API Keys being exposed in your code? Sick of them being placed in github? Sick of them being accessable on the web? DotENV can change that!
 
-Simply put your keys with a name in a .env file. For complete documentation and integration with spring boot, we recommend you take a look at this library: ![spring-dotenv](https://stackoverflow.com/questions/58549361/using-dotenv-files-with-spring-boot)
+Simply put your keys with a name in a .env file. For historical discussion of integration with Spring Boot, see [DotENV and Spring Boot](https://stackoverflow.com/questions/58549361/using-dotenv-files-with-spring-boot).
 

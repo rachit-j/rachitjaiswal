@@ -1,6 +1,6 @@
 ---
 title: The Three Locations for Changing Your Spring Port
-description: Please read this before asking me
+description: "Where application ports, container metadata, and published Docker ports appear in a Spring deployment."
 toc: true
 layout: post
 tags:
@@ -12,6 +12,7 @@ project_tag: rift
 excerpt: >-
   Where application ports, container metadata, and published Docker ports appear in a Spring deployment.
 archive_notice: true
+nav: notebook
 ---
 
 

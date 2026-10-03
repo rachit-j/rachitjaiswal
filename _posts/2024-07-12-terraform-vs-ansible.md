@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Terraform Vs Ansible
-description: Differences Between Terraform and Ansible
+description: "How infrastructure provisioning and configuration management fit together in KasmV2."
 tags:
   - KasmV2
   - AWS
@@ -11,6 +11,7 @@ project_tag: kasmv2
 excerpt: >-
   How infrastructure provisioning and configuration management fit together in KasmV2.
 archive_notice: true
+nav: notebook
 ---
 
 Terraform and Ansible are both powerful tools, each with their own strengths.

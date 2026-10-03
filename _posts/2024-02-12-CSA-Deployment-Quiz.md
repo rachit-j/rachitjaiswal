@@ -1,6 +1,6 @@
 ---
 title: Deployment Quiz README - CSA
-description: What to do day of the deployment quiz for COMPUTER SCIENCE A
+description: "A deployment exercise originally written for a high-school computer science class."
 toc: True
 layout: post
 tags:
@@ -12,6 +12,7 @@ project_tag: rift
 excerpt: >-
   A deployment exercise originally written for a high-school computer science class.
 archive_notice: true
+nav: notebook
 ---
 
 

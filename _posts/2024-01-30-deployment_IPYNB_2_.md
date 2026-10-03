@@ -1,6 +1,6 @@
 ---
 title: How to Deploy on AWS
-description: Lesson on AWS Deployment by RIFT. Made by Rachit
+description: "A classroom guide to deploying student applications with EC2, Docker, Nginx, and Route 53."
 toc: True
 layout: post
 tags:
@@ -12,6 +12,7 @@ project_tag: rift
 excerpt: >-
   A classroom guide to deploying student applications with EC2, Docker, Nginx, and Route 53.
 archive_notice: true
+nav: notebook
 ---
 
 

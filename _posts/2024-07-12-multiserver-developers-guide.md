@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kasm Multi-Server Installer Developers Guide
-description: This document goes through the menu options and other options while explaining how the system is configured and works. Think of this as an extended guide explaining how everything works.
+description: "Developer documentation for the KasmV2 multi-server installer, including setup and implementation notes."
 tags:
   - KasmV2
   - AWS
@@ -11,6 +11,7 @@ project_tag: kasmv2
 excerpt: >-
   Developer documentation for the KasmV2 multi-server installer, including setup and implementation notes.
 archive_notice: true
+nav: notebook
 ---
 
 

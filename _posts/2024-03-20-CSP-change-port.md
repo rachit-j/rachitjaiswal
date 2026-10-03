@@ -1,6 +1,6 @@
 ---
 title: The Three Locations for Changing Your Flask Port
-description: Please read this before asking me
+description: "A short reference for configuring application and Docker ports in a Flask deployment."
 toc: true
 layout: post
 tags:
@@ -12,6 +12,7 @@ project_tag: rift
 excerpt: >-
   A short reference for configuring application and Docker ports in a Flask deployment.
 archive_notice: true
+nav: notebook
 ---
 
 
