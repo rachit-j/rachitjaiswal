@@ -1,0 +1,4 @@
+<header class="site-head{% if page.has_cover %} on-cover{% endif %}"><div class="wrap">
+  <a class="brand" href="{{ "/" | relative_url }}" aria-label="Rachit Jaiswal, home"><img class="avatar-sm" src="{{ "/assets/img/profile.png" | relative_url }}" alt="" width="30" height="30"><span>Rachit Jaiswal</span></a>
+  <nav class="site-nav" aria-label="Primary"><ul><li><a href="{{ "/projects" | relative_url }}"{% if page.nav == "projects" %} aria-current="page"{% endif %}>Work</a></li><li><a href="{{ "/notebook" | relative_url }}"{% if page.nav == "notebook" %} aria-current="page"{% endif %}>Notebook</a></li><li><a href="{{ "/about" | relative_url }}"{% if page.nav == "about" %} aria-current="page"{% endif %}>About</a></li></ul></nav>
+</div></header>
