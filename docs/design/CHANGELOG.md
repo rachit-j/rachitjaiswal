@@ -17,3 +17,5 @@
 2026-10-04 — Separate Dev projects below the three featured case studies, replacing the isolated Hive line.
 
 2026-10-04 — Match Dev projects heading to Earlier projects and Hive title to the other development rows.
+
+2026-10-04 — Add the Boxes case-study page and deployment flow; link it from Dev projects.

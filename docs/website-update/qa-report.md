@@ -41,3 +41,5 @@ On 2026-10-03, a fresh Jekyll build completed successfully. Isolated Playwright 
 ## Cover transition iteration
 
 2026-10-03: fresh build passed. Isolated WebKit checked the cover at 1440×900 and 390×844: identity stays opaque above the entering sheet, fades near the header, becomes inert/aria-hidden after exiting, and restores on reverse scroll. Neither viewport overflowed; WCAG 2.1 A/AA axe reported zero violations at the initial position. Reduced-motion identity remains stationary and opaque; no-JavaScript identity remains visible. No script errors occurred. Temporary preview stopped after verification.
+
+2026-10-04 — Boxes page: fresh Jekyll build passed. Isolated WebKit over the built files passed four-stage flow Replay, Home, End, and ArrowRight controls; 360/390/1440 layout with no overflow; one h1; WCAG 2.1 A/AA axe with no violations; Dev projects link; no-JavaScript content; no browser script errors. No preview server was started.
