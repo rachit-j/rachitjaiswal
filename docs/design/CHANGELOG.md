@@ -11,3 +11,7 @@
 2026-10-03 — Update the primary contact email to jaiswal.rachit07@gmail.com.
 
 2026-10-03 — Keep the cover identity visible above the entering intro; move it upward with scrolling and fade at the viewport edge.
+
+2026-10-04 — Add Boxes to Work with a direct GitHub link.
+
+2026-10-04 — Separate Dev projects below the three featured case studies, replacing the isolated Hive line.
