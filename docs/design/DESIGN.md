@@ -318,3 +318,5 @@ Rachit requests that the homepage name and contact buttons remain visible while 
 2026-10-04 — Move development projects into a separate Work-page section between the three featured case studies and Earlier projects. Use an `h2.h-sub` heading “Dev projects” and existing `.rows` / `.row` components for a smaller section. Replace the isolated Hive bench line with a static project row; retain its supplied description and in-development status. No dates or new links are invented.
 
 Development order: Boxes → Hive → KasmV2. This is the lead’s recency assumption from the latest Boxes addition, ongoing Hive development, and KasmV2’s historical 2024–25 deployment; no dates are fabricated. KasmV2 moves from Earlier projects into Dev projects and retains its route.
+
+2026-10-04 — Rachit reverses the smaller Dev projects heading decision: use `h2.h-sec`, matching Earlier projects. Hive uses `.row` without `.static` so its name shares the same size and typography as Boxes and KasmV2. Keep Hive as a non-link container because no verified destination was supplied.

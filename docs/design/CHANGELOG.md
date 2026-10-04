@@ -15,3 +15,5 @@
 2026-10-04 — Add Boxes to Work with a direct GitHub link.
 
 2026-10-04 — Separate Dev projects below the three featured case studies, replacing the isolated Hive line.
+
+2026-10-04 — Match Dev projects heading to Earlier projects and Hive title to the other development rows.
