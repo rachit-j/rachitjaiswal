@@ -320,3 +320,5 @@ Rachit requests that the homepage name and contact buttons remain visible while 
 Development order: Boxes → Hive → KasmV2. This is the lead’s recency assumption from the latest Boxes addition, ongoing Hive development, and KasmV2’s historical 2024–25 deployment; no dates are fabricated. KasmV2 moves from Earlier projects into Dev projects and retains its route.
 
 2026-10-04 — Rachit reverses the smaller Dev projects heading decision: use `h2.h-sec`, matching Earlier projects. Hive uses `.row` without `.static` so its name shares the same size and typography as Boxes and KasmV2. Keep Hive as a non-link container because no verified destination was supplied.
+
+2026-10-04 — Boxes receives a dedicated `/projects/boxes` case study. Reuse the approved case-study shell, facts aside, and existing interactive flow for repository → build → health check → traffic routing. Source factual copy from the Boxes repository README; no performance metrics, adoption claims, dates, or project status are inferred. Dev projects links to the local page, with the GitHub repository retained in its facts aside.

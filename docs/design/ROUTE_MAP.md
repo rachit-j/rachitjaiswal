@@ -74,3 +74,5 @@ Integrated redesign, 2026-10-03. Branch: `webv2` (opening user instruction overr
 ## 2026-10-03 iteration
 
 `/projects/cmr` → `projects/cmr.html` → Signal, with page-only `assets/lidar.css` and `assets/lidar.js`. Featured order: Math AI → CMR → ARUW. KasmV2 remains at its original route and is listed in Earlier projects.
+
+`/projects/boxes` → `projects/boxes.html` → Signal case-study shell and reference flow component.

@@ -1,0 +1,33 @@
+---
+layout: signal
+title: Boxes
+nav: projects
+description: A self-hosted platform for persistent development containers, browser terminals, and GitHub-based app deployments on one machine.
+---
+<main id="main">
+  <article aria-labelledby="cs-h">
+    <div class="wrap cs-head">
+      <a class="crumb" href="/projects">All work</a>
+      <h1 class="h-page ruled" id="cs-h">Boxes</h1>
+      <div class="cs-meta"><span class="state">Self-hosted platform</span><span class="ctx">Development environments / App deployment</span></div>
+      <p class="cs-summary">Persistent development containers, browser terminals, and GitHub-based app deployments on one machine you control.</p>
+    </div>
+    <div class="flow grid-paper" data-flow="flow-boxes">
+      <div class="wrap">
+        <div class="flow-cap"><span>From a repository to a running app. Select a stage.</span><button class="replay" type="button">Replay</button></div>
+        <ol class="stages" role="tablist" aria-label="Boxes deployment stages"></ol>
+        <div class="note" role="tabpanel" tabindex="0"></div>
+      </div>
+    </div>
+    <script type="application/json" id="flow-boxes">[{"k":"source","v":"GitHub repository","t":"Start with a public repository containing a Dockerfile.","tools":"GitHub, Dockerfile"},{"k":"build","v":"Build the image","t":"Boxes clones the repository and builds its container image with BuildKit.","tools":"Git, BuildKit"},{"k":"check","v":"Health check","t":"The new container must pass its health check before receiving traffic. Failed deployments leave the previous version serving.","tools":"Docker, health checks"},{"k":"route","v":"Switch traffic","t":"Caddy routes the app’s hostname to the healthy container, with public, authenticated, or tailnet-only access.","tools":"Caddy, OIDC, Tailscale"}]</script>
+    <div class="wrap cs-body">
+      <div class="cs-text">
+        <section><h2 class="h-sub">A small cloud of your own</h2><p>Boxes brings development environments and application hosting together on a single Docker host. A dashboard provides live state, logs, deployment history, resource limits, and encrypted environment variables.</p></section>
+        <section><h2 class="h-sub">Persistent development</h2><p>Open a terminal in the browser, install tools, and run your own servers. Terminal sessions use tmux, and workspace storage survives restarts and container deletion.</p></section>
+        <section><h2 class="h-sub">Deployment and access</h2><p>Deploy from a GitHub repository with a Dockerfile. Each application can have its own hostname and access policy. A Go controller manages container lifecycles, builds, health checks, and routing; PostgreSQL stores the platform’s state.</p><p>Boxes is designed for one trusted operator on one machine. An optional Tailscale-connected edge supports hosting without opening inbound ports on that machine.</p></section>
+      </div>
+      <aside class="facts" aria-label="Project facts"><dl><dt>Platform</dt><dd>Single-host, self-hosted</dd><dt>Backend</dt><dd>Go, Docker, BuildKit, PostgreSQL</dd><dt>Routing and access</dt><dd>Caddy, OIDC, optional Tailscale</dd><dt>Interface</dt><dd>Browser dashboard and terminal</dd></dl><a class="ul-link" href="https://github.com/rachit-j/boxes">Boxes on GitHub</a></aside>
+    </div>
+    <nav class="wrap next" aria-label="Related work"><a class="row" href="/projects/kasmv2"><span class="k">Related project</span><span class="row-t">KasmV2</span></a></nav>
+  </article>
+</main>
