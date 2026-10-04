@@ -1,0 +1,31 @@
+/* Native cross-document navigation; keep the original Signal assets unchanged. */
+@view-transition {
+  navigation: auto;
+}
+
+.site-head {
+  view-transition-name: site-header;
+}
+
+::view-transition-group(*) {
+  animation-duration: 180ms;
+  animation-timing-function: var(--ease);
+}
+
+::view-transition-old(root),
+::view-transition-new(root),
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+  animation-duration: 180ms;
+  animation-timing-function: var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  .site-head {
+    view-transition-name: none;
+  }
+}

@@ -70,3 +70,5 @@ exclude:
   - Gemfile.lock
   - vendor
   - assets/resume
+
+  - changes.md
